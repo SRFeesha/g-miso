@@ -1,0 +1,13 @@
+:root {
+    --color-background: #121212; 
+    --color-text: #f3f3f3;
+    --gutter: 16px;
+    --text-heading: Space Grotesk, sans-serif;
+    --text-copy: 'Inria', sans-serif;
+    --transparency: .6;
+}
+
+html {
+    background-color: var(--color-background);
+    font-family: var(--heading-text)
+}

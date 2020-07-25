@@ -1,0 +1,54 @@
+h1 {
+  /* position: absolute;
+  height: 199px;
+  left: 12.85%;
+  right: 22.92%;
+  top: 239px; */
+
+  font-family: var(--text-heading);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.9rem;
+  line-height: 63px;
+  letter-spacing: 0.01em;
+
+  color: #f3f3f3;
+  max-width: 887px;
+  font-weight: 600;
+
+  position: relative;
+  z-index: 1;
+}
+
+h1 > span {
+  opacity: var(--transparency);
+  font-weight: 500;
+}
+
+p {
+  /* position: absolute;
+height: 129px;
+left: 12.85%;
+right: 52.99%;
+top: 457px; */
+
+  font-family: var(--text-heading);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+  opacity: var(--transparency);
+  max-width: 500px;
+  font-weight: 400;
+}
+
+.img {
+  position: absolute;
+  width: 519px;
+  height: 676px;
+  left: 777px;
+  top: 166px;
+  z-index: 0;
+}

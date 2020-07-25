@@ -1,15 +1,16 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer'
+// import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import './all.sass'
+import '../styles/global.css'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import layoutStyle from '../components/Layout.module.css'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <div className={layoutStyle.container}>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -50,7 +51,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar />
       <div>{children}</div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

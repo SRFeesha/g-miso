@@ -1,10 +1,4 @@
-h1 {
-  /* position: absolute;
-  height: 199px;
-  left: 12.85%;
-  right: 22.92%;
-  top: 239px; */
-
+.title {
   font-family: var(--text-heading);
   font-style: normal;
   font-weight: 600;
@@ -20,18 +14,12 @@ h1 {
   z-index: 1;
 }
 
-h1 > span {
+.title > span {
   opacity: var(--transparency);
   font-weight: 500;
 }
 
-p {
-  /* position: absolute;
-height: 129px;
-left: 12.85%;
-right: 52.99%;
-top: 457px; */
-
+.subtitle {
   font-family: var(--text-heading);
   font-style: normal;
   font-weight: normal;

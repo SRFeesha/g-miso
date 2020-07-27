@@ -11,11 +11,11 @@ console.log(heroImage);
 const Hero = class extends React.Component {
   render() {
     return (
-        <section>
-            <h1>
+        <section id="hero">
+            <h1 class={heroStyle.title}>
                 Miso<span> è una </span><br />associazione culturale no-profit <span>fondata a </span>Brescia.
             </h1>
-            <p className="sub">
+            <p className={heroStyle.subtitle}>
                 Siamo più di sessanta ragazzi: attori, filmmakers, registi o semplici appassionati
             </p>
             <img alt= "miso all'opera" src={heroImage} className={heroStyle.img} />

@@ -1,0 +1,11 @@
+.FakeCard {
+    display: inline-block;
+    width: 390px;
+}
+
+.fakeImg {
+    width: 388px;
+    height: 350px;
+    background-color: #fafafa;
+    position: relative;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import Spacer from "./Spacer";
 import Grid from "@material-ui/core/Grid";
-import DonaStyle from "./dona.module.css";
+import DonaStyle from "./Dona.module.css";
 import { Button } from "@material-ui/core";
 import PayPalIcon from "../img/paypal_logo.svg";
 

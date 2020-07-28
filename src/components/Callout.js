@@ -4,7 +4,7 @@ import CS from './Callout.module.css'
 
 const Callout = (props) => {
     return (
-        <div class={CS.callout}>
+        <div className={CS.callout}>
             <p>{props.text}</p>
             <Button variant="contained" size="large">{props.cta}</Button>
         </div>

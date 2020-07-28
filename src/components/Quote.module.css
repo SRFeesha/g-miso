@@ -1,0 +1,49 @@
+.quote blockquote > p {
+  font-size: 2.375rem;
+  font-style: italic;
+  font-weight: 300;
+  max-width: 58rem;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  opacity: var(--transparency);
+  padding-top: 6rem;
+}
+
+.quote:nth-of-type(odd) {
+  text-align: right;
+  justify-items: flex-end;
+}
+
+.quote footer {
+  font-size: 1.333rem;
+  font-style: normal;
+}
+.quote footer cite {
+  font-style: normal;
+  line-height: 1;
+}
+
+.quote footer p {
+  font-weight: 600;
+  font-size: 1.333rem ;
+  line-height: 1;
+  opacity: var(--transparency);
+}
+
+.quote hr {
+  width: 100%;
+  border: 0;
+  margin-top: 1px double white;
+
+  border: none;
+  background-color: white;
+  overflow: visible;
+  text-align: right;
+  height: 1px;
+}
+
+
+/* .quote footer  */

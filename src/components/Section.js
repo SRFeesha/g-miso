@@ -1,9 +1,9 @@
 import React from 'react'
 import SS from './Section.module.css'
 
-const Section = ({ children }) => {
+const Section = (props) => {
   return (
-      <section>{children}</section>
+      <section id={props.id}>{props.children}</section>
   )
 }
 

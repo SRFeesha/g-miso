@@ -12,7 +12,7 @@ const Hero = class extends React.Component {
   render() {
     return (
         <section id="hero">
-            <h1 class={heroStyle.title}>
+            <h1 className={heroStyle.title}>
                 Miso<span> è una </span><br />associazione culturale no-profit <span>fondata a </span>Brescia.
             </h1>
             <p className={heroStyle.subtitle}>

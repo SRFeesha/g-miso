@@ -1,0 +1,35 @@
+.pattern {
+    background: url('../img/Kiwi_pattern_unit.svg');
+    display: flex;
+    align-items: center;
+    padding: 7rem;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 40rem;
+    padding: 6rem 4rem 5rem 4rem;
+    background-color: var(--color-background);
+    align-items: center;
+}
+
+
+.dona {
+    margin-top: 4rem;
+    padding: 1rem 2rem;
+    font-family: var(--text-heading); 
+    font-size: 1.5rem;
+    color: var(--color-text);
+    background-color: #949494;
+}
+
+.content p {
+    opacity: var(--transparency);
+    margin-top: 12px;
+}
+.content p:first-child {
+    margin-bottom: 4rem;
+}

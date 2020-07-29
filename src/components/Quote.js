@@ -1,5 +1,6 @@
 import React from "react";
 import QuoteStyle from "./Quote.module.css";
+import Logo from "./Logo"
 
 const Quote = (props) => {
   return (
@@ -8,8 +9,11 @@ const Quote = (props) => {
       <blockquote>
         <p>{props.cit}</p>
         <footer>
-          <cite>{props.author}</cite>
-          <p>{props.detail}</p>
+          <Logo w="134px" logo={props.logo} />
+          <div class={QuoteStyle.from}>
+            <cite>{props.author}</cite>
+            <p>{props.detail}</p>
+          </div>
         </footer>
       </blockquote>
     </div>

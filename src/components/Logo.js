@@ -3,8 +3,8 @@ import LogoStyle from "./Logo.module.css";
 
 const Logo = (props) => {
   return (
-    <div>
-      <img 
+    <div className={LogoStyle.logoClass}>
+      <img
         className={LogoStyle.logo}
         alt={props.alt}
         src={props.logo}

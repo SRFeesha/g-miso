@@ -3,3 +3,7 @@
   height: 100px;
   background-color: thistle;
 }
+
+.logoClass {
+  display: inline-block;
+}

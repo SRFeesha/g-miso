@@ -7,6 +7,10 @@ import Motivazioni from "../components/Motivazioni";
 import CosaDiconoDiNoi from "../components/CosaDiconoDiNoi";
 import Sostienici from "../components/Sostienici";
 import Social from "../components/Social";
+import { Container, Row, Col } from 'react-grid-system';
+import { setConfiguration } from 'react-grid-system';
+
+setConfiguration({ gridColumns: 8 });
 
 const Home = () => (
   <Layout>

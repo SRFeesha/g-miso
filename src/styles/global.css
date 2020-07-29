@@ -16,6 +16,7 @@ html {
     color: var(--color-text);
     line-height: 1.65;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 
@@ -79,6 +80,10 @@ blockquote {
 
 .text-center {
     text-align: center;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .transparent {

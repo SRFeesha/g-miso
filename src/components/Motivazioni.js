@@ -9,8 +9,8 @@ const Motivazioni = () => {
     <Section>
       <Spacer h="10rem" />
       <Container>
-        <Row debug>
-          <Col md={5} offset={{ md: 2 }} debug>
+        <Row>
+          <Col md={5} sm={8} offset={{ md: 2 }} debug>
             <ShadowTitle title="Le nostre motivazioni" />
             <p class="giant transparent" style={{ maxWidth: 660 + "px" }}>
               L’Italia è una miniera d’oro di <strong>talenti</strong> che non

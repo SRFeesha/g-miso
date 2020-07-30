@@ -2,6 +2,8 @@
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: end;
+    margin-bottom: 1rem;
+    /* overflow-x: hidden; */
 }
 
 .shadowTitle {
@@ -21,11 +23,20 @@
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: var(--text-heading);
-    opacity: .2;
+    opacity: .1;
     color: var(--color-text);
     font-size: 10rem;
     line-height: 0.7;
     user-select: none;
     white-space: nowrap;
     z-index: -1;
+    /* overflow-x: hidden; */
 }
+
+@media only screen and (max-width: 740px) {
+    .shadow {
+        opacity: .1;
+        font-size: 15vw;
+        line-height: 0.9;
+    }
+  }

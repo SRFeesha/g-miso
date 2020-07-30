@@ -1,9 +1,14 @@
-.logo {
-  width: 100px;
-  height: 100px;
-  background-color: thistle;
-}
-
 .logoClass {
   display: inline-block;
+}
+
+.logoClass img {
+  width: 134px;
+  /* height: 134px; */
+}
+
+@media only screen and (max-width: 740px) {
+  .logoClass img {
+    width: 100px;
+  }
 }

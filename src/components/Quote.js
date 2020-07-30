@@ -9,7 +9,7 @@ const Quote = (props) => {
       <blockquote>
         <p>{props.cit}</p>
         <footer>
-          <Logo w="134px" logo={props.logo} />
+          <Logo logo={props.logo} />
           <div class={QuoteStyle.from}>
             <cite>{props.author}</cite>
             <p>{props.detail}</p>

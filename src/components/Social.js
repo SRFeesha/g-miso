@@ -5,10 +5,8 @@ import Spacer from "./Spacer";
 import SocialStyle from "./Social.module.css";
 import LogoInsta from "../img/Instagram Logo.svg";
 import LogoMail from "../img/Mail Logo.svg";
-import { StylesProvider } from "@material-ui/core/styles";
 import LogoFb from "../img/Facebook Logo.svg";
 import ButtonSocial from "./ButtonSocial";
-import Grid from "@material-ui/core/Grid";
 import { Container, Row, Col } from "react-grid-system";
 
 const Social = () => {
@@ -31,13 +29,13 @@ const Social = () => {
         </Row>
         <Spacer h="4rem" />
         <Row debug>
-          <Col md={1} offset={{ lg: 2 }} debug>
+          <Col xs={2} md={1} offset={{ lg: 2}} debug>
             <ButtonSocial logo={LogoInsta} />
           </Col>
-          <Col md={1} offset={{ lg: 1 }} debug>
+          <Col xs={2} md={1} offset={{ lg: 1, xs:1 }} debug>
             <ButtonSocial logo={LogoFb} />
             </Col>
-            <Col md={1} offset={{ lg: 1 }} debug>
+            <Col xs={2} md={1} offset={{ lg: 1, xs:1 }} debug>
             <ButtonSocial logo={LogoMail} />
             </Col>
         </Row>

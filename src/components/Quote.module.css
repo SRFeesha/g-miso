@@ -57,3 +57,16 @@
   align-items: center;
   line-height: 1;
 }
+
+.logoCit {
+  width: 134px;
+}
+
+@media only screen and (max-width: 740px) {
+  .quote blockquote > p {
+    font-size: 1.4rem;
+    }
+    .logoCit {
+      width: 67px;
+    }
+}

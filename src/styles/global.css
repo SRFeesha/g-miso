@@ -39,13 +39,13 @@ h2 {
 }
 h3 {
     font-size: 2.369rem;
+    font-weight: 500;
 }
 h4 {
     font-size: 1.777rem;
-    margin-top: 2rem;
     margin-bottom: -.5rem;
+    line-height: 1.65;
 }
-
 
 p {
     line-height: 1.65;
@@ -70,6 +70,11 @@ blockquote {
     max-width: 931px;
 }
 
+@media only screen and (max-width: 740px) {
+    .giant {
+        font-size: 1.33rem;
+    }
+}
 
 /* UTILITY  */
 .full-bleed {

@@ -11,7 +11,7 @@ const CosaFacciamo = (props) => {
   return (
     <section id="cosa-facciamo">
       <ShadowTitle title="Cosa facciamo" />
-      <p class="bigger transparent">
+      <p className="bigger transparent">
         Sosteniamo i giovani creativi nel mondo dello spettacolo
       </p>
       <Spacer h="54px" />

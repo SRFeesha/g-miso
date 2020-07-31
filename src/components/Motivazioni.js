@@ -7,12 +7,12 @@ import { Container, Row, Col } from "react-grid-system";
 const Motivazioni = () => {
   return (
     <Section>
-      <Spacer h="10rem" />
+      <Spacer h="40vh" />
       <Container>
         <Row>
-          <Col md={5} sm={8} offset={{ md: 2 }} debug>
+          <Col md={5} sm={8} offset={{ md: 2 }}>
             <ShadowTitle title="Le nostre motivazioni" />
-            <p class="giant transparent" style={{ maxWidth: 660 + "px" }}>
+            <p className="giant transparent" style={{ maxWidth: 660 + "px" }}>
               L’Italia è una miniera d’oro di <strong>talenti</strong> che non
               possono restare nascosti—è fondamentale{" "}
               <strong>unire le nostre voci</strong> e farci sentire. <br />
@@ -23,6 +23,7 @@ const Motivazioni = () => {
           </Col>
         </Row>
       </Container>
+      <Spacer h="30vh" />
     </Section>
   );
 };

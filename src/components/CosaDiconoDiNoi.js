@@ -10,11 +10,11 @@ const CosaDiconoDiNoi = () => {
   return (
     <Section>
       <Container>
-        <Row debug>
+        <Row >
           <ShadowTitle title="Cosa dicono di noi" />
         </Row>
-        <Row debug>
-          <Col md={7} debug>
+        <Row>
+          <Col md={7}>
             <Quote
               // <> (shorthand for React.Fragment) è un modo per renderizzare l'hatml in jsx
               cit={
@@ -36,8 +36,8 @@ const CosaDiconoDiNoi = () => {
           </Col>
         </Row>
         <Row>
-          <Col md={7} offset={{ md: 1 }} debug>
-            <Quote
+          <Col md={7} offset={{ md: 1 }}>
+            <Quote 
               cit={
                 <>
                   il coinvolgimento di giovani con diverse competenze:{" "}

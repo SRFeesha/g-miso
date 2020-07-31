@@ -13,7 +13,7 @@ const ChiCiSostiene = (props) => {
   return (
     <div>
       <Spacer h="15rem" />
-      <h3 class="text-center">Chi ci sostiene</h3>
+      <h3 className="text-center">Chi ci sostiene</h3>
       <Spacer h="3rem" />
       <Grid 
         container 

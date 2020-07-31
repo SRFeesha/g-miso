@@ -1,7 +1,6 @@
 import React from "react";
 import HeroImage from "../img/Miso_Hero_Image.png";
 import HeroStyle from "./Hero.module.css";
-import Section from "./Section";
 
 const Hero = class extends React.Component {
   render() {

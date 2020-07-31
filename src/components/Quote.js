@@ -10,7 +10,7 @@ const Quote = (props) => {
         <p>{props.cit}</p>
         <footer>
           <Logo logo={props.logo} />
-          <div class={QuoteStyle.from}>
+          <div className={QuoteStyle.from}>
             <cite>{props.author}</cite>
             <p>{props.detail}</p>
           </div>

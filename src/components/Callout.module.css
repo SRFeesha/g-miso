@@ -10,8 +10,6 @@
 
 .callout p{
     font-family: var(--text-heading);
-    font-size: 2rem;
-    opacity: var(--transparency);
     line-height: 1.33;
     margin-bottom: 1em;
 }

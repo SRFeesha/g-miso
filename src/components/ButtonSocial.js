@@ -4,8 +4,8 @@ import Button from "@material-ui/core/Button";
 
 const ButtonSocial = (props) => {
     return (
-        <Button className={style.btn}>
-            <img src={props.logo} />
+        <Button className={style.btn} onClick={() => {  window.open(props.href, "_blank"); }}>
+            <img src={props.logo} alt={props.alt}/>
         </Button>
     )
 }

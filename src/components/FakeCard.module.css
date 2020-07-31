@@ -1,11 +1,8 @@
-.FakeCard {
-    display: inline-block;
-    width: 390px;
+.fakeImg {
+    width: 100%;
 }
 
-.fakeImg {
-    width: 388px;
-    height: 350px;
-    background-color: #fafafa;
-    position: relative;
+hr{
+    border: none;
+    border-top: 2px solid var(--color-text);
 }

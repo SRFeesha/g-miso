@@ -12,7 +12,8 @@
   padding-top: 6rem;
 }
 
-.quote:nth-of-type(odd) {
+/* .quote:nth-of-type(even) { */
+.quote:nth-child(2) {
   text-align: right;
   justify-items: flex-end;
 }
@@ -45,5 +46,27 @@
   height: 1px;
 }
 
+.from {
+  display: inline-block;
+}
 
-/* .quote footer  */
+.quote footer {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 1rem;
+  align-items: center;
+  line-height: 1;
+}
+
+.logoCit {
+  width: 134px;
+}
+
+@media only screen and (max-width: 740px) {
+  .quote blockquote > p {
+    font-size: 1.4rem;
+    }
+    .logoCit {
+      width: 67px;
+    }
+}

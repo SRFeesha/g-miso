@@ -5,6 +5,8 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import style from "./blog-post.module.css"
+import { Container, Row, Col } from "react-grid-system";
 
 export const BlogPostTemplate = ({
   content,
@@ -17,32 +19,35 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <Container>
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
+      <header className={style.header}>
+        <h1 className={style.title}>{title}</h1>
+        <p className={style.subtitle}>Autore data tempo di lettura</p>
+        <p className={style.excerpt}>{description}</p>
+      </header>
+      <Row debug>
+        <Col lg={6} offset={{lg: 1}} debug>
+          <article>
+            <PostContent content={content} className={style.blogContent} />
+          </article>
+        </Col>
+      </Row>
+      {tags && tags.length ? (
+        <div style={{ marginTop: `4rem` }}>
+          <h4>Tags</h4>
+          <ul className="taglist">
+            {tags.map((tag) => (
+              <li key={tag + `tag`}>
+                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
-    </section>
+      ) : null}
+      <p className={style.socialShare}>Condividi sui social</p>
+    </Container>
+
   )
 }
 

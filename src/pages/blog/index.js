@@ -18,9 +18,9 @@ export default class BlogIndexPage extends React.Component {
           </Row>
           
           <h1 className={style.sectionHeading}>Ultimi articoli</h1>
-          <Row>
+          <Row className={style.postList}>
             <Col lg={2}></Col>
-            <Col lg={6}>
+            <Col lg={5} >
               <BlogRoll />
             </Col>
           </Row>

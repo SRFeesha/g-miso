@@ -15,7 +15,7 @@ class BlogRoll extends React.Component {
             <Link className={style.link} to={post.fields.slug}>
               <article className={style.blogPost}>
                 <h3 className={style.title}>{post.frontmatter.title}</h3>
-                <p className={style.sub}>
+                <p className={style.subtitle}>
                   <span className="transparent">Autore: </span>
                   {/* {post.frontmatter.author} */}Ezio
                   <span className="transparent">

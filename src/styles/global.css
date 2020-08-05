@@ -20,6 +20,15 @@ html {
     overflow-x: hidden;
 }
 
+a {
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: solid 2px var(--color-blog);
+}
+
+a:hover {
+    color: var(--color-blog); 
+}
 
 /* TYPOGRAPHY */
 h1,
@@ -73,9 +82,17 @@ blockquote {
 }
 
 @media only screen and (max-width: 740px) {
+    h1 {
+        font-size: 3.157rem; }
+    h2 { 
+        font-size: 2.369rem; }
+    h3 {
+        font-size: 1.777rem; }
+    h4 {
+        font-size: 1.25rem; }
+    
     .giant {
-        font-size: 1.33rem;
-    }
+        font-size: 1.33rem; }
 }
 
 /* UTILITY  */
@@ -95,4 +112,13 @@ blockquote {
 
 .transparent {
     opacity: var(--transparency);
+}
+
+.line{
+    border: 0;
+    border-top: solid 1px var(--color-text);
+    opacity: .2;
+    transform: translate(-8%, -1rem);
+    width: 120%;
+    margin-bottom: 4rem;
 }

@@ -2,6 +2,7 @@
     --color-background: #121212; 
     --color-gray-dark: #292929;
     --color-text: #f3f3f3;
+    --color-blog: #fbcc33;
     --gutter: 16px;
     --text-heading: Space Grotesk, sans-serif;
     --text-copy: 'Inria Sans', sans-serif;
@@ -29,6 +30,7 @@ h4 {
     margin: 0;
     /* letter-spacing: 0.5px; */
     letter-spacing: 0.01em;
+    line-height: 1.15;
 }
 
 h1 {

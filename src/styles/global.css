@@ -91,6 +91,9 @@ blockquote {
     h4 {
         font-size: 1.25rem; }
     
+    pre {
+        overflow: hidden!important;
+    }
     .giant {
         font-size: 1.33rem; }
 }

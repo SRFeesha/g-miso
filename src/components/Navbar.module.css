@@ -17,3 +17,9 @@
   -webkit-text-stroke: 4px var(--color-text);
   font-weight: 900;
 }
+
+.link {
+  margin-right: 1rem;
+  padding: 1rem 0;
+  color: var(--color-text);
+}

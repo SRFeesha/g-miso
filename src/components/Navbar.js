@@ -1,14 +1,15 @@
-import React from 'react'
+import React from "react";
 // import logo from '../img/logo.svg'
-import navStyle from './Navbar.module.css'
+import navStyle from "./Navbar.module.css";
+import { Link } from "gatsby";
 
 const Navbar = class extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       active: false,
-      navBarActiveClass: '',
-    }
+      navBarActiveClass: "",
+    };
   }
 
   toggleHamburger = () => {
@@ -22,14 +23,14 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: 'is-active',
+              navBarActiveClass: "is-active",
             })
           : this.setState({
-              navBarActiveClass: '',
-            })
+              navBarActiveClass: "",
+            });
       }
-    )
-  }
+    );
+  };
 
   render() {
     return (
@@ -38,14 +39,25 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className={navStyle.container}>
-          <span className={navStyle.bigText}>
-            Miso
-          </span>
+        <div
+            id="navMenu"
+            className={`navbar-menu ${this.state.navBarActiveClass}`}
+          >
+            <div className="navbar-start has-text-centered">
+              <Link className={navStyle.link} to="/blog">
+                Blog   
+              </Link>
+              <Link className={navStyle.link} to="/">
+                Home              
+              </Link>
+            </div>
         </div>
+        {/* <div className={navStyle.container}>
+          <span className={navStyle.bigText}>Miso</span>
+        </div> */}
       </nav>
-    )
+    );
   }
-}
+};
 
-export default Navbar
+export default Navbar;

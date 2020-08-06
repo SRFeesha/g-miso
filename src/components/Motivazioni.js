@@ -7,6 +7,7 @@ import { Container, Row, Col } from "react-grid-system";
 const Motivazioni = () => {
   return (
     <Section id="motivazioni">
+      <Spacer h={12} />
       <Container>
         <Row>
           <Col md={5} sm={8} offset={{ md: 2 }}>

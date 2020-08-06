@@ -26,7 +26,7 @@ const ChiCiSostiene = (props) => {
         <Logo w="134px" logo={Musei} />
         <Logo w="134px" logo={Calabrone} />
       </Grid>
-      <Spacer h={10} />
+      <Spacer h={11} />
     </div>
   );
 };

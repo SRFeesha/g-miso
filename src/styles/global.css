@@ -8,6 +8,16 @@
     --text-copy: 'Inria Sans', sans-serif;
     --transparency: .6;
     --border-roundy: 2rem;
+    --warm-grey-050: #FAF9F7;
+    --warm-grey-100: #E8E6E1;
+    --warm-grey-200: #D3CEC4;
+    --warm-grey-300: #B8B2A7;
+    --warm-grey-400: #A39E93;
+    --warm-grey-500: #857F72;
+    --warm-grey-600: #625D52;
+    --warm-grey-700: #504A40;
+    --warm-grey-800: #423D33;
+    --warm-grey-900: #3f3d39;
 }
 
 html {
@@ -24,6 +34,10 @@ a {
     color: var(--color-text);
     text-decoration: none;
     border-bottom: solid 2px var(--color-blog);
+}
+
+.discrelink {
+    border-bottom: none;
 }
 
 a:hover {

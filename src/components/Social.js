@@ -30,7 +30,7 @@ const Social = () => {
             <ButtonSocial logo={LogoFb} href="https://www.facebook.com/studiomisobrescia/" />
             </Col>
             <Col xs={2} md={1} offset={{ lg: 1, xs:1 }}>
-            <ButtonSocial logo={LogoMail} />
+            <ButtonSocial logo={LogoMail} href="mailto:studiomisobrescia@gmail.com" />
             </Col>
         </Row>
       </Container>

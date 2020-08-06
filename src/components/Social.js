@@ -17,16 +17,11 @@ const Social = () => {
           <Col md={5} offset={{ lg: 2 }}>
             <ShadowTitle title="Restiamo in contatto" />
             <p className="giant transparent">
-              Non lasciamo idee nel cassetto e ogni progetto è un’opportunità
-              per rinnovarsi e sperimentare. Puoi restare aggiornato sulle nuove
-              attività tramite i social Facebook e Instagram o direttamente
-              iscrivendoti alla newsletter. Se sei ancora più curioso puoi
-              mandarci direttamente una mail a *indirizzo mail*. Risponderemo a
-              tutte le tue domande.
+              Non lasciamo idee nel cassetto e ogni progetto è un’opportunità per rinnovarsi e sperimentare. Puoi restare aggiornato sulle nuove attività tramite i social. Per qualsiasi proposta o domanda, scrivici pure direttamente.
             </p>
           </Col>
         </Row>
-        <Spacer h={9} />
+        <Spacer h={10} />
         <Row>
           <Col xs={2} md={1} offset={{ lg: 2}}>
             <ButtonSocial logo={LogoInsta} href="https://www.instagram.com/studio.miso/" />

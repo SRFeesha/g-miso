@@ -10,12 +10,7 @@
   flex-direction: column;
   opacity: var(--transparency);
   padding-top: 6rem;
-}
-
-/* .quote:nth-of-type(even) { */
-.quote:nth-child(2) {
-  text-align: right;
-  justify-items: flex-end;
+  position: relative;
 }
 
 .quote footer {
@@ -35,15 +30,24 @@
 }
 
 .quote hr {
-  width: 100%;
-  border: 0;
-  margin-top: 1px double white;
-
   border: none;
   background-color: white;
-  overflow: visible;
-  text-align: right;
-  height: 1px;
+  height: 2px;
+  width: 85%;
+  opacity: .2;
+  margin-bottom: 2.5rem;
+  margin-left: 0;
+}
+
+.quote hr:after {
+  content: '"';
+  font-size: 15rem;
+  font-family: var(--text-heading);
+  background-color: var(--color-bg);
+  position: absolute;
+  height: auto;
+  top: -3%;
+  right: 0;
 }
 
 .from {

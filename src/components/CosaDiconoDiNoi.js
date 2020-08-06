@@ -2,9 +2,11 @@ import React from "react";
 import Quote from "./Quote";
 import Section from "./Section";
 import ShadowTitle from "./ShadowTitle";
+import Spacer from "./Spacer";
 import { Container, Row, Col } from "react-grid-system";
 import GiornaleDiBrescia from '../img/socialProof/logo_gdb.png'
 import Calabrone from '../img/socialProof/logo_calab.png'
+import style from './CosaDiconoDiNoi.module.css'
 
 const CosaDiconoDiNoi = () => {
   return (
@@ -13,12 +15,13 @@ const CosaDiconoDiNoi = () => {
         <Row >
           <ShadowTitle title="Cosa dicono di noi" />
         </Row>
+        <Spacer h={6} />
+        
         <Row>
           <Col md={7}>
             <Quote
-              // <> (shorthand for React.Fragment) è un modo per renderizzare l'hatml in jsx
-              cit={
-                <>
+              // <> (shorthand for React.Fragment) è un modo per renderizzare l'html in jsx
+              cit = {<>
                   Ci sono voluti solo <strong>pochi mesi</strong> perché
                   arrivassero a mettere in scena il loro primo{" "}
                   <strong>dramma teatrale</strong>, dare il via alle riprese del
@@ -27,16 +30,17 @@ const CosaDiconoDiNoi = () => {
                   determinati e hanno le idee piuttosto chiare: nei mesi scorsi
                   hanno battezzato la loro associazione culturale{" "}
                   <strong>Miso</strong>"
-                </>
-              }
-              author="Giornale di Brescia"
-              detail="19 mag 2018"
-              logo={GiornaleDiBrescia}
+                </>}
+              author = "Giornale di Brescia"
+              detail = "19 mag 2018"
+              logo = {GiornaleDiBrescia}
             ></Quote>
           </Col>
         </Row>
+        <Spacer h={9} /> 
+        
         <Row>
-          <Col md={7} offset={{ md: 1 }}>
+          <Col md={7} offset={{ md: 1 }} className = {style.right}>
             <Quote 
               cit={
                 <>

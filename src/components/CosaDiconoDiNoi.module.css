@@ -1,0 +1,13 @@
+.right {
+  text-align: right;
+}
+
+.right footer {
+  grid-template-columns: auto min-content;
+
+}
+
+.right blockquote footer div:first-child {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}

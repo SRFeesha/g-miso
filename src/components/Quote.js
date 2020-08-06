@@ -5,7 +5,7 @@ import Logo from "./Logo"
 const Quote = (props) => {
   return (
     <div className={QuoteStyle.quote}>
-      <hr></hr>
+      <hr />
       <blockquote>
         <p>{props.cit}</p>
         <footer>

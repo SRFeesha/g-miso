@@ -8,7 +8,7 @@ import Calabrone from '../img/socialProof/logo_calab.png'
 
 const CosaDiconoDiNoi = () => {
   return (
-    <Section>
+    <Section id="dicono-di-noi">
       <Container>
         <Row >
           <ShadowTitle title="Cosa dicono di noi" />

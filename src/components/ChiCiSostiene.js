@@ -12,9 +12,9 @@ import Fondazione from '../img/socialProof/logo_fcb.png'
 const ChiCiSostiene = (props) => {
   return (
     <div>
-      <Spacer h="15rem" />
+      <Spacer h={13} />
       <h3 className="text-center">Chi ci sostiene</h3>
-      <Spacer h="3rem" />
+      <Spacer h={8} />
       <Grid 
         container 
         direction="row" 
@@ -26,7 +26,7 @@ const ChiCiSostiene = (props) => {
         <Logo w="134px" logo={Musei} />
         <Logo w="134px" logo={Calabrone} />
       </Grid>
-      <Spacer h="6rem" />
+      <Spacer h={10} />
     </div>
   );
 };

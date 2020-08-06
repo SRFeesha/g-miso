@@ -14,7 +14,7 @@ const CosaFacciamo = (props) => {
       <p className="bigger transparent">
         Sosteniamo i giovani creativi nel mondo dello spettacolo
       </p>
-      <Spacer h="54px" />
+      <Spacer h={9} />
 
       <Container>
         <Row>
@@ -35,7 +35,7 @@ const CosaFacciamo = (props) => {
           </Col>
         </Row>
       </Container>
-      <Spacer h="128px" />
+      <Spacer h={11} />
       <Callout
         text="Sei interessato a far parte della nostra Associazione? Non esitare a contattarci."
         cta="Unisciti a noi"

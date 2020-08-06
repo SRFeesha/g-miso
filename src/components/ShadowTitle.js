@@ -1,13 +1,15 @@
 import React from "react";
-import STS from "../components/ShadowTitle.module.css";
+import STS from "./ShadowTitle.module.css";
+import Spacer from "./Spacer";
 
 const shadowTitle = (props) => {
-  const title = props.title
-
   return (
-    <div className={STS.father}>
-      <div className={STS.shadow}>{title}</div>
-      <div className={STS.shadowTitle}>{title}</div>
+    <div>
+      <Spacer h={12} />
+      <div className={STS.father}>
+        <div className={STS.shadow}>{props.title}</div>
+        <div className={STS.shadowTitle}>{props.title}</div>
+      </div>
     </div>
   );
 };

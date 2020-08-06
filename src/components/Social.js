@@ -10,8 +10,8 @@ import { Container, Row, Col } from "react-grid-system";
 
 const Social = () => {
   return (
-    <Section>
-      <Spacer h="10rem" />
+    <Section id="social">
+      <Spacer h={12} />
       <Container>
         <Row>
           <Col md={5} offset={{ lg: 2 }}>
@@ -26,7 +26,7 @@ const Social = () => {
             </p>
           </Col>
         </Row>
-        <Spacer h="4rem" />
+        <Spacer h={9} />
         <Row>
           <Col xs={2} md={1} offset={{ lg: 2}}>
             <ButtonSocial logo={LogoInsta} href="https://www.instagram.com/studio.miso/" />
@@ -39,6 +39,7 @@ const Social = () => {
             </Col>
         </Row>
       </Container>
+      <Spacer h={10}  />
     </Section>
   );
 };

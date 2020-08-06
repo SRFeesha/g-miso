@@ -35,7 +35,7 @@ export const BlogPostTemplate = ({
           </article>
         </Col>
       </Row>
-      <Spacer h="3rem" />
+      <Spacer h={8} />
       <Row>
         <Col lg={3} offset={{ lg: 1 }}>
           {tags && tags.length ? (

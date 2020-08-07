@@ -138,4 +138,5 @@ blockquote {
     transform: translate(-8%, -1rem);
     width: 120%;
     margin-bottom: 4rem;
+    max-width: 100vw;
 }

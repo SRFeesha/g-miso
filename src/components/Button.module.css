@@ -42,13 +42,18 @@
 }
 
 @media only screen and (max-width: 740px) {
-    .socila .btn{
-        width: 80px;
-        height: 80px;
+    .btn{
+        font-size: 1.25rem;
+        padding: 1.5rem 1.5rem;
+    }
+    
+    .social .btn{
+        width: 64px;
+        height: 64px;
     }
 
     .social .btn img {
-        height: 32px;
-        width: 32px;
+        height: 24px;
+        width: 24px;
     }
 }

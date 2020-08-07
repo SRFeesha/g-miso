@@ -1,9 +1,7 @@
 import React from "react";
 import DonaStyle from "./Dona.module.css";
-import { Button } from "@material-ui/core";
+import Button from "./Button";
 import PayPalIcon from "../img/paypal_logo.svg";
-
-import { Icon } from "@material-ui/core";
 
 const Dona = () => {
   return (
@@ -15,10 +13,8 @@ const Dona = () => {
             no-profit e in quanto tale ci sosteniamo con le donazioni di sponsor
             e privati. Aiutaci a crescere.
           </p>
-          <Button variant="contained" size="large" className={DonaStyle.dona}>
-            <Icon>
-              <img src={PayPalIcon} alt="PayPal icon" height={25} width={25} />
-            </Icon>
+          <Button className={DonaStyle.dona}>
+            <img src={PayPalIcon} alt="PayPal icon" height={28} width={28} />
             Aiutaci con una donazione
           </Button>
           <p>

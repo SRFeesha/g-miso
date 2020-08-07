@@ -5,7 +5,7 @@ import Spacer from "./Spacer";
 import LogoInsta from "../img/Instagram Logo.svg";
 import LogoMail from "../img/Mail Logo.svg";
 import LogoFb from "../img/Facebook Logo.svg";
-import ButtonSocial from "./ButtonSocial";
+import Button from "./Button";
 import { Container, Row, Col } from "react-grid-system";
 
 const Social = () => {
@@ -24,13 +24,19 @@ const Social = () => {
         <Spacer h={10} />
         <Row>
           <Col xs={2} md={1} offset={{ lg: 2}}>
-            <ButtonSocial logo={LogoInsta} href="https://www.instagram.com/studio.miso/" />
+            <Button href="https://www.instagram.com/studio.miso/" type="social" target="_blank"  >
+              <img src={LogoInsta} alt="logo instagram miso" />
+            </Button>
           </Col>
           <Col xs={2} md={1} offset={{ lg: 1, xs:1 }}>
-            <ButtonSocial logo={LogoFb} href="https://www.facebook.com/studiomisobrescia/" />
+            <Button href="https://www.facebook.com/studiomisobrescia/" type="social" target="_blank">
+              <img src={LogoFb} alt="logo facebook miso" />
+            </Button>
             </Col>
             <Col xs={2} md={1} offset={{ lg: 1, xs:1 }}>
-            <ButtonSocial logo={LogoMail} href="mailto:studiomisobrescia@gmail.com" />
+            <Button href="mailto:studiomisobrescia@gmail.com" type="social" target="_blank">
+            <img src={LogoMail} alt="logo mail miso" />
+            </Button>
             </Col>
         </Row>
       </Container>

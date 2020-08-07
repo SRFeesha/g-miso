@@ -1,7 +1,7 @@
 .quote blockquote > p {
   font-size: 2.375rem;
   font-style: italic;
-  font-weight: 300;
+  /* font-weight: 300; */
   max-width: 58rem;
 }
 
@@ -16,14 +16,16 @@
 .quote footer {
   font-size: 1.333rem;
   font-style: normal;
+  margin-top: 1rem;
 }
+
 .quote footer cite {
   font-style: normal;
   line-height: 1;
 }
 
 .quote footer p {
-  font-weight: 600;
+  /* font-weight: 600; */
   font-size: 1.333rem ;
   line-height: 1;
   opacity: var(--transparency);
@@ -50,8 +52,9 @@
   right: 0;
 }
 
-.from {
+.from{
   display: inline-block;
+  font-weight: 400;
 }
 
 .quote footer {

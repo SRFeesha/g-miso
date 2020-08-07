@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
-    description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+    title: 'Miso — Associazione di Promozione Sociale',
+    description: 'Miso è una associazione culturale no-profit fondata a Brescia. A farne parte più di sessanta ragazzi: attori, filmmakers, registi o semplici appassionati',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

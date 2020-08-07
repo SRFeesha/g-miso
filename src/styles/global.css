@@ -4,7 +4,7 @@
     --color-text: #f3f3f3;
     --color-blog: #fbcc33;
     --gutter: 16px;
-    --text-heading: Space Grotesk, sans-serif;
+    --text-heading: 'Space Grotesk', sans-serif;
     --text-copy: 'Inria Sans', sans-serif;
     --transparency: .6;
     --border-roundy: 2rem;
@@ -19,6 +19,7 @@
     --warm-grey-800: #423D33;
     --warm-grey-900: #3f3d39;
 }
+
 
 html {
     background-color: var(--color-background);

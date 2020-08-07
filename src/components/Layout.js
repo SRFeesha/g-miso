@@ -7,6 +7,7 @@ import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 import layoutStyle from '../components/Layout.module.css'
 import { setConfiguration } from 'react-grid-system';
+import font from '../styles/font/font.css'
 
 setConfiguration({ gridColumns: 8 });
 

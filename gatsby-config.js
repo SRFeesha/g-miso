@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Miso — Associazione di Promozione Sociale',
-    description: 'Miso è una associazione culturale no-profit fondata a Brescia. A farne parte più di sessanta ragazzi: attori, filmmakers, registi o semplici appassionati',
+    description:
+      'Miso è una associazione culturale no-profit fondata a Brescia. A farne parte più di sessanta ragazzi: attori, filmmakers, registi o semplici appassionati',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

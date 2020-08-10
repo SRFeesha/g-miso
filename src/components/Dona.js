@@ -1,7 +1,7 @@
-import React from "react";
-import DonaStyle from "./Dona.module.css";
-import Button from "./Button";
-import PayPalIcon from "../img/paypal_logo.svg";
+import React from 'react'
+import DonaStyle from './Dona.module.css'
+import Button from './Button'
+import PayPalIcon from '../img/paypal_logo.svg'
 
 const Dona = () => {
   return (
@@ -24,7 +24,7 @@ const Dona = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Dona;
+export default Dona

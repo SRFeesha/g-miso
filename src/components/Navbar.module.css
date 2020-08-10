@@ -1,5 +1,8 @@
 nav {
   height: 5rem;
+  /* position: fixed; */
+  /* top: 0; */
+  /* width: 100%; */
 }
 
 .container {
@@ -42,6 +45,14 @@ nav {
 .logo {
   opacity: .6;
   transition: opacity .3s ease-in-out;
+  /* z-index: 100; */
+}
+
+.logo,
+.link{
+  position: fixed;
+  top: 1rem;
+  z-index: 99;
 }
 
 .logo:hover{

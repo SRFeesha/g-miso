@@ -1,12 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link, graphql, StaticQuery } from "gatsby";
-import style from "../styles/blog.module.css";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link, graphql, StaticQuery } from 'gatsby'
+import style from '../styles/blog.module.css'
 
 class BlogRoll extends React.Component {
   render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+    const { data } = this.props
+    const { edges: posts } = data.allMarkdownRemark
 
     return (
       <div id="blog-post-list">
@@ -19,9 +19,12 @@ class BlogRoll extends React.Component {
                   <span className="transparent">Autore: </span>
                   {/* {post.frontmatter.author} */}Ezio
                   <span className="transparent">
-                    <span className={style.space}>/</span> Tempo di lettura:{" "}
+                    <span className={style.space}>/</span> Tempo di lettura:{' '}
                   </span>
-                  {post.timeToRead} min <span className="transparent"><span className={style.space}>/</span></span>
+                  {post.timeToRead} min{' '}
+                  <span className="transparent">
+                    <span className={style.space}>/</span>
+                  </span>
                   {post.frontmatter.date}
                 </p>
                 <p class={style.excerpt}>{post.excerpt}</p>
@@ -29,7 +32,7 @@ class BlogRoll extends React.Component {
             </Link>
           ))}
       </div>
-    );
+    )
   }
 }
 
@@ -39,7 +42,7 @@ BlogRoll.propTypes = {
       edges: PropTypes.array,
     }),
   }),
-};
+}
 
 export default () => (
   <StaticQuery
@@ -75,4 +78,4 @@ export default () => (
     `}
     render={(data, count) => <BlogRoll data={data} count={count} />}
   />
-);
+)

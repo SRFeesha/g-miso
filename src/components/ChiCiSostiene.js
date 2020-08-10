@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 import Logo from './Logo'
 import Spacer from './Spacer'
-import Grid from '@material-ui/core/Grid';
+import Grid from '@material-ui/core/Grid'
 import Calabrone from '../img/socialProof/logo_calab.png'
 import Comune from '../img/socialProof/logo_comune.png'
 import Musei from '../img/socialProof/logo_fbm.png'
@@ -15,10 +15,10 @@ const ChiCiSostiene = (props) => {
       <Spacer h={13} />
       <h3 className="text-center">Chi ci sostiene</h3>
       <Spacer h={8} />
-      <Grid 
-        container 
-        direction="row" 
-        justify="space-evenly" 
+      <Grid
+        container
+        direction="row"
+        justify="space-evenly"
         alignItems="flex-start"
       >
         <Logo w="134px" logo={Fondazione} />
@@ -28,7 +28,7 @@ const ChiCiSostiene = (props) => {
       </Grid>
       <Spacer h={11} />
     </div>
-  );
-};
+  )
+}
 
-export default ChiCiSostiene;
+export default ChiCiSostiene

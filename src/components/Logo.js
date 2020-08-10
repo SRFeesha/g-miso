@@ -1,5 +1,5 @@
-import React from "react";
-import LogoStyle from "./Logo.module.css";
+import React from 'react'
+import LogoStyle from './Logo.module.css'
 
 const Logo = (props) => {
   return (
@@ -12,7 +12,7 @@ const Logo = (props) => {
         height={props.h}
       />
     </div>
-  );
-};
+  )
+}
 
-export default Logo;
+export default Logo

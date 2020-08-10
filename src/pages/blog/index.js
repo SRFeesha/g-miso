@@ -1,9 +1,9 @@
-import React from "react";
-import Layout from "../../components/Layout";
-import BlogRoll from "../../components/BlogRoll";
-import FeaturedPost from "../../components/FeaturedPost";
-import style from "../../styles/blog.module.css";
-import { Container, Row, Col } from "react-grid-system";
+import React from 'react'
+import Layout from '../../components/Layout'
+import BlogRoll from '../../components/BlogRoll'
+import FeaturedPost from '../../components/FeaturedPost'
+import style from '../../styles/blog.module.css'
+import { Container, Row, Col } from 'react-grid-system'
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -16,16 +16,16 @@ export default class BlogIndexPage extends React.Component {
               <FeaturedPost />
             </Col>
           </Row>
-          
+
           <h1 className={style.sectionHeading}>Ultimi articoli</h1>
           <Row className={style.postList}>
             <Col lg={2}></Col>
-            <Col lg={5} >
+            <Col lg={5}>
               <BlogRoll />
             </Col>
           </Row>
         </Container>
       </Layout>
-    );
+    )
   }
 }

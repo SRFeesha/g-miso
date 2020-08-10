@@ -1,6 +1,6 @@
-import React from "react";
-import QuoteStyle from "./Quote.module.css";
-import Logo from "./Logo"
+import React from 'react'
+import QuoteStyle from './Quote.module.css'
+import Logo from './Logo'
 
 const Quote = (props) => {
   return (
@@ -17,7 +17,7 @@ const Quote = (props) => {
         </footer>
       </blockquote>
     </div>
-  );
-};
+  )
+}
 
-export default Quote;
+export default Quote

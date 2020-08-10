@@ -1,12 +1,12 @@
-import React from "react";
-import Section from "./Section";
-import ShadowTitle from "./ShadowTitle";
-import Spacer from "./Spacer";
-import LogoInsta from "../img/Instagram Logo.svg";
-import LogoMail from "../img/Mail Logo.svg";
-import LogoFb from "../img/Facebook Logo.svg";
-import Button from "./Button";
-import { Container, Row, Col } from "react-grid-system";
+import React from 'react'
+import Section from './Section'
+import ShadowTitle from './ShadowTitle'
+import Spacer from './Spacer'
+import LogoInsta from '../img/Instagram Logo.svg'
+import LogoMail from '../img/Mail Logo.svg'
+import LogoFb from '../img/Facebook Logo.svg'
+import Button from './Button'
+import { Container, Row, Col } from 'react-grid-system'
 
 const Social = () => {
   return (
@@ -57,7 +57,7 @@ const Social = () => {
       </Container>
       <Spacer h={10} />
     </Section>
-  );
-};
+  )
+}
 
-export default Social;
+export default Social

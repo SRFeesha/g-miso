@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "gatsby";
-import style from "./Footer.module.css";
-import logo from "../img/logo/logo_white_48.png";
-import { Container, Row, Col } from "react-grid-system";
-import Spacer from "./Spacer";
+import React from 'react'
+import { Link } from 'gatsby'
+import style from './Footer.module.css'
+import logo from '../img/logo/logo_white_48.png'
+import { Container, Row, Col } from 'react-grid-system'
+import Spacer from './Spacer'
 
 const Footer = class extends React.Component {
   render() {
@@ -21,13 +21,13 @@ const Footer = class extends React.Component {
               <a href="https://www.facebook.com/studiomisobrescia/">Facebook</a>
               <a href="mailto:studiomisobrescia@gmail.com">Inviaci una mail</a>
             </Col>
-            <Col lg={2} className={style.col} >
+            <Col lg={2} className={style.col}>
               <Link to="/">Privacy Policy</Link>
               <Link to="/">Trattamento dei dati</Link>
               <Link to="/">Organigramma Miso</Link>
               <Link to="/">Statuto dell'associazione</Link>
             </Col>
-            <Col lg={3} className={style.col} >
+            <Col lg={3} className={style.col}>
               <p>
                 Miso · Associazione di promozione sociale <br />
                 Via Moretto 84 · 25121 · Brescia (BS)
@@ -40,22 +40,25 @@ const Footer = class extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col 
-              // offset={{lg: 5}}
+            <Col
+            // offset={{lg: 5}}
             >
-            <p className={style.credit}>
-              Made with Gatsby by{" "}
-              <a className="discrete-link" href="https://youcancallmeben.design">
-                Beniamino Marini
-              </a>
-            </p>
+              <p className={style.credit}>
+                Made with Gatsby by{' '}
+                <a
+                  className="discrete-link"
+                  href="https://youcancallmeben.design"
+                >
+                  Beniamino Marini
+                </a>
+              </p>
             </Col>
           </Row>
         </Container>
         <Spacer h={6} />
       </footer>
-    );
+    )
   }
-};
+}
 
-export default Footer;
+export default Footer

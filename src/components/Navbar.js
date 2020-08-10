@@ -1,16 +1,16 @@
-import React from "react";
-import logo from "../img/logo/logo_white_48.png";
-import style from "./Navbar.module.css";
-import { Link } from "gatsby";
-import { Container, Row, Col } from "react-grid-system";
+import React from 'react'
+import logo from '../img/logo/logo_white_48.png'
+import style from './Navbar.module.css'
+import { Link } from 'gatsby'
+import { Container, Row, Col } from 'react-grid-system'
 
 const Navbar = class extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       active: false,
-      navBarActiveClass: "",
-    };
+      navBarActiveClass: '',
+    }
   }
 
   toggleHamburger = () => {
@@ -24,26 +24,26 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: "is-active",
+              navBarActiveClass: 'is-active',
             })
           : this.setState({
-              navBarActiveClass: "",
-            });
+              navBarActiveClass: '',
+            })
       }
-    );
-  };
+    )
+  }
 
   render() {
     return (
       <nav role="navigation" aria-label="main-navigation" className={style.nav}>
         <Container>
-          <Row className={style.row} >
-            <Col xs={2}>
+          <Row className={style.row}>
+            <Col xs={2} lg={7}>
               <Link to="/" className={style.logo}>
                 <img src={logo} alt="logo miso" className={style.logo} />
               </Link>
             </Col>
-            <Col xs={6} className={style.linkList}>
+            <Col xs={6} lg={1} className={style.linkList}>
               <Link className={style.link} to="/blog">
                 Blog
               </Link>
@@ -54,8 +54,8 @@ const Navbar = class extends React.Component {
           <span className={navStyle.bigText}>Miso</span>
         </div> */}
       </nav>
-    );
+    )
   }
-};
+}
 
-export default Navbar;
+export default Navbar

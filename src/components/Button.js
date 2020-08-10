@@ -1,6 +1,6 @@
-import React from "react";
-import Ripples from "react-ripples";
-import style from "./Button.module.css";
+import React from 'react'
+import Ripples from 'react-ripples'
+import style from './Button.module.css'
 
 // const x = {props.type};
 
@@ -13,7 +13,7 @@ const Button = (props) => {
         </a>
       </Ripples>
     </div>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

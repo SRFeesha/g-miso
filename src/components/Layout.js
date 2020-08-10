@@ -6,10 +6,12 @@ import '../styles/global.css'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 import layoutStyle from '../components/Layout.module.css'
-import { setConfiguration } from 'react-grid-system';
+import { setConfiguration } from 'react-grid-system'
+
+// eslint-disable-next-line
 import font from '../styles/font/font.css'
 
-setConfiguration({ gridColumns: 8 });
+setConfiguration({ gridColumns: 8 })
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()

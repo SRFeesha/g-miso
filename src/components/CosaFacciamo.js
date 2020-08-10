@@ -1,11 +1,12 @@
-import React from "react";
-import ShadowTitle from "./ShadowTitle";
-import FakeCard from "./FakeCard";
-import imgTeatro from "../img/Teatro.png";
-import imgCinema from "../img/Cinema.png";
-import Spacer from "./Spacer";
-import Callout from "./Callout";
-import { Container, Row, Col } from "react-grid-system";
+import React from 'react'
+import ShadowTitle from './ShadowTitle'
+import FakeCard from './FakeCard'
+// import imgTeatro from '../img/Teatro.jpg'
+import imgTeatro from '../img/Teatro.png'
+import imgCinema from '../img/Cinema.jpg'
+import Spacer from './Spacer'
+import Callout from './Callout'
+import { Container, Row, Col } from 'react-grid-system'
 
 const CosaFacciamo = (props) => {
   return (
@@ -21,6 +22,7 @@ const CosaFacciamo = (props) => {
           <Col md={3} sm={5} xs={7}>
             <FakeCard
               img={imgTeatro}
+              alt="Miso a teatro"
               title="Teatro"
               text="Ogni anno presentiamo una rassegna di spettacoli teatrali originali. 
               Tutti gli aspetti dalla regia, scenografia, costumi, e musiche di scena,  sono curate direttamente dai nostri Associati. "
@@ -29,6 +31,7 @@ const CosaFacciamo = (props) => {
           <Col md={3} sm={5} xs={7} offset={{ md: 1, sm: 3, xs: 1 }}>
             <FakeCard
               img={imgCinema}
+              alt="Miso mentre filma per un cortometraggio"
               title="Cinema"
               text="Mettiamo la nostra attrezzatura a disposizione dei cineasti e organizziamo insieme le riprese. Abbiamo fondato nel 2019 il Brixia Film Festival, festival internazionale di cortometraggi."
             />
@@ -41,7 +44,7 @@ const CosaFacciamo = (props) => {
         cta="Unisciti a noi"
       />
     </section>
-  );
-};
+  )
+}
 
-export default CosaFacciamo;
+export default CosaFacciamo

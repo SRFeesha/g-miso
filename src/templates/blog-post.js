@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
-import { Helmet } from "react-helmet";
-import { graphql, Link } from "gatsby";
-import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
-import style from "./blog-post.module.css";
-import { Container, Row, Col } from "react-grid-system";
-import Spacer from "../components/Spacer"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { kebabCase } from 'lodash'
+import { Helmet } from 'react-helmet'
+import { graphql, Link } from 'gatsby'
+import Layout from '../components/Layout'
+import Content, { HTMLContent } from '../components/Content'
+import style from './blog-post.module.css'
+import { Container, Row, Col } from 'react-grid-system'
+import Spacer from '../components/Spacer'
 
 export const BlogPostTemplate = ({
   content,
@@ -17,11 +17,11 @@ export const BlogPostTemplate = ({
   title,
   helmet,
 }) => {
-  const PostContent = contentComponent || Content;
+  const PostContent = contentComponent || Content
 
   return (
     <Container>
-      {helmet || ""}
+      {helmet || ''}
       <header className={style.header}>
         <h1 className={style.title}>{title}</h1>
         <p className={style.subtitle}>Autore data tempo di lettura</p>
@@ -43,7 +43,9 @@ export const BlogPostTemplate = ({
               <h4>Tags</h4>
               <div className={style.taglist}>
                 {tags.map((tag) => (
-                  <Link to={`/tags/${kebabCase(tag)}/`} key={tag + `tag`}>{tag}</Link>
+                  <Link to={`/tags/${kebabCase(tag)}/`} key={tag + `tag`}>
+                    {tag}
+                  </Link>
                 ))}
               </div>
             </div>
@@ -54,8 +56,8 @@ export const BlogPostTemplate = ({
         </Col>
       </Row>
     </Container>
-  );
-};
+  )
+}
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
@@ -63,10 +65,10 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
-};
+}
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data
 
   return (
     <Layout>
@@ -87,16 +89,16 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
       />
     </Layout>
-  );
-};
+  )
+}
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
-};
+}
 
-export default BlogPost;
+export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -111,4 +113,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

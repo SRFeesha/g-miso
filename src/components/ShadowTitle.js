@@ -1,6 +1,6 @@
-import React from "react";
-import STS from "./ShadowTitle.module.css";
-import Spacer from "./Spacer";
+import React from 'react'
+import STS from './ShadowTitle.module.css'
+import Spacer from './Spacer'
 
 const shadowTitle = (props) => {
   return (
@@ -11,7 +11,7 @@ const shadowTitle = (props) => {
         <div className={STS.shadowTitle}>{props.title}</div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default shadowTitle;
+export default shadowTitle

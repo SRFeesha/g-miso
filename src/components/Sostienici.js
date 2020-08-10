@@ -1,7 +1,7 @@
-import React from "react";
-import Section from "./Section";
-import ChiCiSostiene from "./ChiCiSostiene";
-import Dona from "./Dona";
+import React from 'react'
+import Section from './Section'
+import ChiCiSostiene from './ChiCiSostiene'
+import Dona from './Dona'
 
 const Sostienici = () => {
   return (
@@ -9,7 +9,7 @@ const Sostienici = () => {
       <ChiCiSostiene />
       <Dona />
     </Section>
-  );
-};
+  )
+}
 
-export default Sostienici;
+export default Sostienici

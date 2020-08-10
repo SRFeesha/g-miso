@@ -1,8 +1,7 @@
-import React from "react";
-import HeroImage from "../img/Miso_Hero_Image.png";
-import HeroStyle from "./Hero.module.css";
-import Spacer from "./Spacer";
-import Section from "./Section";
+import React from 'react'
+import HeroStyle from './Hero.module.css'
+import Spacer from './Spacer'
+import Section from './Section'
 
 const Hero = class extends React.Component {
   render() {
@@ -22,10 +21,11 @@ const Hero = class extends React.Component {
               semplici appassionati
             </p>
           </div>
-          <img alt="miso all'opera" src={HeroImage} className={HeroStyle.img} />
+          <div className={HeroStyle.imgContainer}>
+          </div>
         </div>
       </Section>
-    );
+    )
   }
-};
-export default Hero;
+}
+export default Hero

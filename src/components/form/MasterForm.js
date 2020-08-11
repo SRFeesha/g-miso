@@ -1,122 +1,143 @@
-import React from 'react'
-import Step0 from './Step0'
-import Step1 from './Step1'
-import style from './MasterForm.module.css'
+import React from "react";
+import Step0 from "./Step0";
+import Step1 from "./Step1";
+import Step2 from "./Step2";
+import Step3 from "./Step3";
+import Button from "../Button";
+import style from "./MasterForm.module.css";
 
 class MasterForm extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      currentStep: 1,
-      email: '',
-      username: '',
-      password: '',
-    }
+      currentStep: 0,
+      name:"",
+      birth:"",
+      city:"",
+      address:"",
+      email: "",
+      privacy: "",
+    };
     // These bindings are necessary to make `this` work in the callback
-    this.handleChange = this.handleChange.bind(this)
-    this._next = this._next.bind(this)
-    this._prev = this._prev.bind(this)
+    this.handleChange = this.handleChange.bind(this);
+    this._next = this._next.bind(this);
+    this._prev = this._prev.bind(this);
   }
 
   _next() {
-    let currentStep = this.state.currentStep
+    let currentStep = this.state.currentStep;
     // If the current step is 1 or 2, then add one on "next" button click
-    currentStep = currentStep >= 2 ? 3 : currentStep + 1
+    currentStep = currentStep >= 2 ? 3 : currentStep+1;
     this.setState({
       currentStep: currentStep,
-    })
+    });
   }
   _prev() {
-    let currentStep = this.state.currentStep
+    let currentStep = this.state.currentStep;
     // If the current step is 2 or 3, then subtract one on "previous" button click
-    currentStep = currentStep <= 1 ? 1 : currentStep - 1
+    currentStep = currentStep <=1? 0: currentStep-1;
     this.setState({
       currentStep: currentStep,
-    })
+    });
   }
   get previousButton() {
-    let currentStep = this.state.currentStep
+    let currentStep = this.state.currentStep;
     // If the current step is not 1, then render the "previous" button
-    if (currentStep !== 1) {
+    if (currentStep !== 0) {
       return (
-        <button
-          className="btn btn-secondary"
-          type="button"
-          onClick={this._prev}
-        >
-          Previous
-        </button>
-      )
+        <div data-pag="prev">
+          <Button onClick={this._prev} type="secondary">
+            Previous
+          </Button>
+        </div>
+      );
     }
     // ...else return nothing
-    return null
+    return null;
   }
   get nextButton() {
-    let currentStep = this.state.currentStep
+    let currentStep = this.state.currentStep;
     // If the current step is not 3, then render the "next" button
     if (currentStep < 3) {
       return (
-        <button
-          className="btn btn-primary float-right"
-          type="button"
-          onClick={this._next}
-        >
-          Next
-        </button>
-      )
+        <div data-pag="next">
+          <Button type="secondary" onClick={this._next}>
+            Next
+          </Button>
+        </div>
+      );
     }
     // ...else render nothing
-    return null
+    return null;
   }
 
   // Use the submitted data to set the state
   handleChange(event) {
-    const { name, value } = event.target
+    const { name, value } = event.target;
     this.setState({
       [name]: value,
-    })
+    });
   }
 
   // Trigger an alert on form submission
   handleSubmit = (event) => {
-    event.preventDefault()
-    const { email, username, password } = this.state
+    event.preventDefault();
+    const { email, username, password } = this.state;
     alert(`Your registration detail: \n 
         Email: ${email} \n 
         Username: ${username} \n
-        Password: ${password}`)
-  }
+        Password: ${password}`);
+  };
 
   render() {
-    if (!this.props.show) return null
+    if (!this.props.show) return null;
 
     return (
       <React.Fragment>
         <div className={style.scrim}>
           <div className={style.formContent}>
-            <a className={style.close} onClick={this.props.handleClose}>
-              ×
-            </a>
-            <h1>Step {this.state.currentStep} </h1>
+            <header className={style.stepper}>
+              <p>Fase {this.state.currentStep} di 3</p>
+              <a className={style.close} onClick={this.props.handleClose}>×</a>
+            </header>
+
             <form onSubmit={this.handleSubmit}>
               <Step0
                 currentStep={this.state.currentStep}
                 handleChange={this.handleChange}
-                email={this.state.email}
               />
+
               <Step1
                 currentStep={this.state.currentStep}
                 handleChange={this.handleChange}
-                username={this.state.username}
+                name={this.state.name}
+                birth={this.state.birth}
+                city={this.state.city}
+                address={this.state.address}
+                email={this.state.email}
+                privacy={this.state.privacy}
               />
-              {this.previousButton}
-              {this.nextButton}
+
+              <Step2
+                currentStep={this.state.currentStep}
+                handleChange={this.handleChange}
+              />
+
+              <Step3
+                currentStep={this.state.currentStep}
+                handleChange={this.handleChange}
+              />
+
+              <footer>
+                {this.previousButton}
+                {this.nextButton}
+              </footer>
             </form>
           </div>
         </div>
       </React.Fragment>
-    )
+    );
   }
 }
 
-export default MasterForm
+export default MasterForm;

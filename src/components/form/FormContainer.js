@@ -3,17 +3,17 @@ import Layout from "../Layout";
 import MasterForm from "./MasterForm";
 import Button from "../Button";
 
-class FormDemo extends React.Component {
+class FormContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = { show: false };
     // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
   }
 
-    handleClick() {
-      console.log("clicked bitsch!");
-    }
+  // handleClick() {
+  //   console.log("clicked bitsch!");
+  // }
 
   showModal = () => {
     this.setState({ show: true });
@@ -33,12 +33,13 @@ class FormDemo extends React.Component {
         >
           Unisciti a noi
         </Button>
-        <MasterForm show={this.state.show} 
-        // handleClose={this.hideModal}
-         />
+        <MasterForm
+          show={this.state.show}
+          // handleClose={this.hideModal}
+        />
       </Layout>
     );
   }
 }
 
-export default FormDemo;
+export default FormContainer;

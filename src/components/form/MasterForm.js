@@ -8,7 +8,7 @@ class MasterForm extends React.Component {
     super(props);
     // Set the initial input values
     this.state = {
-        show: false,
+        // show: false,
         currentStep: 1, // Default is Step 1
         email: "",
         username: "",
@@ -22,6 +22,10 @@ class MasterForm extends React.Component {
     this._next = this._next.bind(this);
     this._prev = this._prev.bind(this);
   }
+
+//   showModal(){
+//       this.setState({show: true})
+//   }
 
   closeModal(){
     this.props.handleClose();
@@ -103,13 +107,14 @@ class MasterForm extends React.Component {
   };
 
   render() {
-    if (!this.state.show)
+    if (!this.props.show)
       return null;
+
     return (
       <React.Fragment>
         <div className={style.scrim}>
           <div className={style.formContent}>
-            {/* <a className={style.close} onClick={this.closeModal}>×</a> */}
+            <a className={style.close} onClick={this.closeModal}>×</a>
             <h1>Step {this.state.currentStep} </h1>
             <form onSubmit={this.handleSubmit}>
               <Step0

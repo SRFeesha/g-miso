@@ -28,7 +28,7 @@ const Social = () => {
         <Row>
           <Col xs={2} md={1} offset={{ lg: 2 }}>
             <Button
-              href="https://www.instagram.com/studio.miso/"
+              href="https://www.instagram.com/miso.associazione/"
               type="social"
               target="_blank"
             >

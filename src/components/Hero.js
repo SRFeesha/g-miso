@@ -21,8 +21,7 @@ const Hero = class extends React.Component {
               semplici appassionati
             </p>
           </div>
-          <div className={HeroStyle.imgContainer}>
-          </div>
+          <div className={HeroStyle.imgContainer}></div>
         </div>
       </Section>
     )

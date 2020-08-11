@@ -8,7 +8,12 @@ const Button = (props) => {
   return (
     <div className={style[props.type]}>
       <Ripples>
-        <a href={props.href} className={style.btn} target={props.target} onClick={props.onClick}>
+        <a
+          href={props.href}
+          className={style.btn}
+          target={props.target}
+          onClick={props.onClick}
+        >
           {props.children}
         </a>
       </Ripples>

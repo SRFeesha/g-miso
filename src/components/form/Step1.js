@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react'
 
 class Step1 extends React.Component {
   render() {
     if (this.props.currentStep !== 1) {
       // Prop: The current step
-      return null;
+      return null
     }
     // The markup for the Step 1 UI
     return (
@@ -77,8 +77,8 @@ class Step1 extends React.Component {
           dell’Associazione.
         </label>
       </div>
-    );
+    )
   }
 }
 
-export default Step1;
+export default Step1

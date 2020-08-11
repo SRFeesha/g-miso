@@ -18,7 +18,8 @@ class FormContainer extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <div>
+        {/* // <Layout> */}
         <Button
           onClick={(e) => {
             this.showModal()
@@ -27,7 +28,8 @@ class FormContainer extends React.Component {
           Unisciti a noi
         </Button>
         <MasterForm show={this.state.show} handleClose={this.hideModal} />
-      </Layout>
+        {/* // </Layout> */}
+      </div>
     )
   }
 }

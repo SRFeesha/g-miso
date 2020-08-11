@@ -18,9 +18,29 @@
     align-items: center;
 }
 
+.secondary .btn {
+    padding: 1.1rem 2rem 1rem;
+    font-family: var(--text-heading);
+    color: var(--color-text);
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 1;
+    background-color: var(--warm-grey-700);
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: all .45s ease-in-out;
+    letter-spacing: .1em;
+    font-weight: 500;
+}
+
 .btn:hover {
     color: var(--color-background);
     background-color: var(--color-blog);
+}
+
+.secondary .btn:hover{
+    color: var(--color-blog);
+    background-color: var(--warm-grey-600);
 }
 
 .social .btn{

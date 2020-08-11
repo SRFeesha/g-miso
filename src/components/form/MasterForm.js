@@ -29,6 +29,7 @@ class MasterForm extends React.Component {
 
   closeModal(){
     this.props.handleClose();
+    // this.props.show = false;
   }
 
   // Test current step with ternary

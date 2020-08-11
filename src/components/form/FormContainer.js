@@ -35,7 +35,7 @@ class FormContainer extends React.Component {
         </Button>
         <MasterForm
           show={this.state.show}
-          // handleClose={this.hideModal}
+          handleClose={this.hideModal}
         />
       </Layout>
     );

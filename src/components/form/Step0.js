@@ -2,14 +2,14 @@ import React from 'react'
 import Spacer from '../Spacer'
 
 class Step0 extends React.Component {
+  
   render() {
+    const title = 'titolo 1';
     if (this.props.currentStep !== 0) {
       return null
     }
     return (
       <div className="form-group">
-        <h2>Come entrare a fare parte di Miso</h2>
-        <Spacer h={4} />
         <p>
           Miso è un'associazione no profit, per entrare a farne parte sono
           necessari alcuni step
@@ -17,15 +17,15 @@ class Step0 extends React.Component {
         <p>
           Per entrare ufficialmente in Miso devi tesserarti. I passaggi
           richiesti sono:
-          <ol>
-            <li>Inserire i tuoi dati (nome, cognome, codice fiscale ecc)</li>
-            <li>
-              Versare la quota di iscrizione (5€ — è un costo simbolico e verrà
-              chiesto solo all'inizio)
-            </li>
-            <li>Miso inserirà la tua iscrizione nel nostro albo</li>
-          </ol>
         </p>
+        <ol>
+          <li>Inserire i tuoi dati (nome, cognome, codice fiscale ecc)</li>
+          <li>
+            Versare la quota di iscrizione (5€ — è un costo simbolico e verrà
+            chiesto solo all'inizio)
+          </li>
+          <li>Miso inserirà la tua iscrizione nel nostro albo</li>
+        </ol>
         <Spacer h={4} />
         <p>
           <em>
@@ -35,6 +35,7 @@ class Step0 extends React.Component {
               className="discretelink"
               href="https://www.instagram.com/miso.associazione/"
               target="_blank"
+              rel="noreferrer"
             >
               Seguici su Instagram!
             </a>

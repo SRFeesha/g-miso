@@ -9,7 +9,6 @@ class Step2 extends React.Component {
     // The markup for the Step 1 UI
     return (
       <div className="form-group">
-        <h3>Conferma i tuoi dati</h3>
         <p>
           Ti invitiamo a controllare un attimo i dati inseriti. Se ti rendi conto che c'è qualcosa di sbagliato puoi modificarli cliccando su indietro.
         </p>

@@ -7,10 +7,10 @@ class Step1 extends React.Component {
       // Prop: The current step
       return null;
     }
+    // this.props.setParentTitle ('titolo 1');
     // The markup for the Step 1 UI
     return (
       <div className="form-group">
-        <h3>Inserisci i tuoi dati</h3>
         <label htmlFor="name">Nome Completo</label>
         <input
           className="form-control"

@@ -9,11 +9,18 @@ class Step2 extends React.Component {
     // The markup for the Step 1 UI
     return (
       <div className="form-group">
-        <h3>Inserisci i tuoi dati di pagamento</h3>
+        <h3>Conferma i tuoi dati</h3>
         <p>
-          O magari per il momento gli diciamo semplicemente che sarà fatto tutto
-          via mail
+          Ti invitiamo a controllare un attimo i dati inseriti. Se ti rendi conto che c'è qualcosa di sbagliato puoi modificarli cliccando su indietro.
         </p>
+        <p>{this.props.state.name}</p>
+        <p>{this.props.state.city}</p>
+        <p>{this.props.state.address}</p>
+        <p>{this.props.state.birth}</p>
+        <p>{this.props.state.born}</p>
+        <p>{this.props.state.email}</p>
+        <p>{this.props.state.cell}</p>
+        <p>{this.props.state.privacy}</p>
       </div>
     )
   }

@@ -12,10 +12,12 @@ class MasterForm extends React.Component {
     this.state = {
       currentStep: 0,
       name: '',
-      birth: '',
       city: '',
       address: '',
+      birth: '',
+      born: '',
       email: '',
+      cell: '',
       privacy: '',
     }
     // These bindings are necessary to make `this` work in the callback
@@ -47,7 +49,7 @@ class MasterForm extends React.Component {
       return (
         <div data-pag="prev">
           <Button onClick={this._prev} type="secondary">
-            Previous
+            Indietro
           </Button>
         </div>
       )
@@ -62,7 +64,7 @@ class MasterForm extends React.Component {
       return (
         <div data-pag="next">
           <Button type="secondary" onClick={this._next}>
-            Next
+            Continua
           </Button>
         </div>
       )
@@ -83,7 +85,7 @@ class MasterForm extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault()
     const { email, username, password } = this.state
-    alert(`Your registration detail: \n 
+    console.log(`Your registration detail: \n 
         Email: ${email} \n 
         Username: ${username} \n
         Password: ${password}`)
@@ -106,23 +108,26 @@ class MasterForm extends React.Component {
             <form onSubmit={this.handleSubmit}>
               <Step0
                 currentStep={this.state.currentStep}
-                handleChange={this.handleChange}
+                // handleChange={this.handleChange}
               />
 
               <Step1
                 currentStep={this.state.currentStep}
                 handleChange={this.handleChange}
                 name={this.state.name}
-                birth={this.state.birth}
                 city={this.state.city}
                 address={this.state.address}
+                birth={this.state.birth}
+                born={this.state.born}
                 email={this.state.email}
+                cell={this.state.cell}
                 privacy={this.state.privacy}
               />
 
               <Step2
                 currentStep={this.state.currentStep}
                 handleChange={this.handleChange}
+                state={this.state}
               />
 
               <Step3

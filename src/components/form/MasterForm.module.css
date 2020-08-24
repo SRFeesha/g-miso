@@ -32,6 +32,7 @@
     position: relative;
     padding: 4rem;
     transition: all 1s;
+    max-width: max(40vw, 300px);
 }
 
 header {
@@ -69,20 +70,31 @@ header {
     right: 10px;
     padding: .5rem;
     line-height: 1.5;
-    font-size: 1rem;
+    font-size: 2rem;
     width: 1.5rem;
     height: 1.5rem;
     text-align: center;
     transition: .4s;
-    transform-origin: center center;
     border-radius: 50%;
-    background-color: var(--warm-grey-700);
     border: none;
     cursor: pointer;
 }
 
 .close:hover {
-    transform: rotate(360deg);
-    transform-origin: center center;
+    background-color: var(--warm-grey-700);
+}
+
+
+/* FORM INPUT */
+#birth {
+    color: var(--warm-grey-200);
+}
+.terms{
+    display: flex;
+    grid-gap: .5rem;
+}
+
+.privacy {
+    display: inline-block;
 }
 

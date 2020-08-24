@@ -63,11 +63,6 @@ input:focus-within{
     background-color: var(--color-text);
 }
 
-input.checkbox {
-    display: inline-block;
-}
-
-
 
 /* TYPOGRAPHY */
 h1,

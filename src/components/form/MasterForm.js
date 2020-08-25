@@ -11,7 +11,7 @@ class MasterForm extends React.Component {
     super(props);
     this.state = {
       currentStep: 0,
-      currentTitle: "Come entrare a fare parte di Miso",
+      currentTitle: "Come fare parte di Miso",
       name: "",
       city: "",
       address: "",
@@ -19,7 +19,7 @@ class MasterForm extends React.Component {
       born: "",
       email: "",
       cell: "",
-      privacy: "",
+      privacy: false,
     };
     // These bindings are necessary to make `this` work in the callback
     this.handleChange = this.handleChange.bind(this);
@@ -83,18 +83,24 @@ class MasterForm extends React.Component {
 
   // Use the submitted data to set the state
   handleChange(event) {
-    console.log(event);
+    console.log(event.target);
     const { name, value } = event.target;
-    this.setState({
-      [name]: value,
-    });
+    // this.setState({
+    //   [name]: value,
+    // });
+    // if (name === "privacy")
+    //   this.setState({
+    //     [name]: event.target.checked,
+    //   });
+    
+    name === "privacy" ? this.setState({[name]: event.target.checked,}) : this.setState({[name]: value}) 
   }
 
   setTitle(step) {
     let title = "";
     switch (step) {
       case 0:
-        title = "Come entrare a fare parte di Miso";
+        title = "Come fare parte di Miso";
         break;
       case 1:
         title = "Inserisci i tuoi dati";
@@ -126,55 +132,54 @@ class MasterForm extends React.Component {
 
     return (
       <React.Fragment>
+        <div className={style.modal}>
+          <header className={style.stepper}>
+            <p>Fase {this.state.currentStep} di 3</p>
+            <h3>{this.state.currentTitle}</h3>
+            <a
+              className={style.close}
+              onClick={this.props.handleClose}
+              href="#"
+            >
+              ×
+            </a>
+          </header>
+
+          <form onSubmit={this.handleSubmit}>
+            <Step0 currentStep={this.state.currentStep} />
+
+            <Step1
+              currentStep={this.state.currentStep}
+              handleChange={this.handleChange}
+              name={this.state.name}
+              city={this.state.city}
+              address={this.state.address}
+              birth={this.state.birth}
+              born={this.state.born}
+              email={this.state.email}
+              cell={this.state.cell}
+              privacy={this.state.privacy}
+            />
+
+            <Step2
+              currentStep={this.state.currentStep}
+              // handleChange={this.handleChange}
+              state={this.state}
+            />
+
+            <Step3
+              currentStep={this.state.currentStep}
+              // handleChange={this.handleChange}
+            />
+          </form>
+
+          <footer>
+            {this.previousButton}
+            {this.nextButton}
+          </footer>
+        </div>
         <div className={style.scrim}>
-          <div className={style.formContent}>
-            <header className={style.stepper}>
-              <p>Fase {this.state.currentStep} di 3</p>
-              <h3>{this.state.currentTitle}</h3>
-              <a
-                className={style.close}
-                onClick={this.props.handleClose}
-                href="#"
-              >
-                ×
-              </a>
-            </header>
 
-            <form onSubmit={this.handleSubmit}>
-              <Step0 currentStep={this.state.currentStep} />
-
-              <Step1
-                currentStep={this.state.currentStep}
-                handleChange={this.handleChange}
-                name={this.state.name}
-                city={this.state.city}
-                address={this.state.address}
-                birth={this.state.birth}
-                born={this.state.born}
-                email={this.state.email}
-                cell={this.state.cell}
-                privacy={this.state.privacy}
-              />
-
-              <Step2
-                currentStep={this.state.currentStep}
-                currentTitle="Title 2"
-                handleChange={this.handleChange}
-                state={this.state}
-              />
-
-              <Step3
-                currentStep={this.state.currentStep}
-                currentTitle={this.state.currentTitle}
-                handleChange={this.handleChange}
-              />
-            </form>
-            
-            <footer>
-              {this.previousButton}
-              {this.nextButton}
-            </footer>
-          </div>
         </div>
       </React.Fragment>
     );

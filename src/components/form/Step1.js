@@ -43,6 +43,7 @@ class Step1 extends React.Component {
 
         <label htmlFor="birth">Data di nascita</label>
         <input
+          className="form-control"
           id="birth"
           name="birth"
           type="date"
@@ -92,8 +93,6 @@ class Step1 extends React.Component {
             type="checkbox"
             value={this.props.privacy} 
             defaultChecked={this.props.privacy}
-            // checked={this.props.privacy}
-            // onChange={console.log(e)} // Prop: Puts data into state
             onClick={this.props.handleChange} // Prop: Puts data into state
           />
           <label htmlFor="privacy" className={style.privacy}>

@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./MasterForm.module.css";
+import Button from "../Button";
 
 class Step2 extends React.Component {
   render() {
@@ -38,6 +39,7 @@ class Step2 extends React.Component {
           <p>Consenso alla privacy: </p>
           <p>{privacy}</p>
         </div>
+        <button>Unisciti a Miso</button>
       </div>
     );
   }

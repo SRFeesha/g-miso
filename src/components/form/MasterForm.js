@@ -5,10 +5,12 @@ import Step2 from "./Step2";
 import Step3 from "./Step3";
 import Button from "../Button";
 import style from "./MasterForm.module.css";
+import { navigate } from "gatsby"
 
 class MasterForm extends React.Component {
   constructor(props) {
     super(props);
+    this.JoinForm = React.createRef()
     this.state = {
       currentStep: 0,
       currentTitle: "Come fare parte di Miso",
@@ -27,6 +29,12 @@ class MasterForm extends React.Component {
     this._prev = this._prev.bind(this);
     // this.setTitle = this.setTitle.bind(this)
   }
+  encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+
 
   _next() {
     let currentStep = this.state.currentStep;
@@ -83,7 +91,7 @@ class MasterForm extends React.Component {
 
   // Use the submitted data to set the state
   handleChange(event) {
-    console.log(event.target);
+    // console.log(event.target);
     const { name, value } = event.target;
     // this.setState({
     //   [name]: value,
@@ -118,14 +126,35 @@ class MasterForm extends React.Component {
   }
 
   // Trigger an alert on form submission
-  handleSubmit = (event) => {
-    event.preventDefault();
-    const { email, username, password } = this.state;
-    console.log(`Your registration detail: \n 
-        Email: ${email} \n 
-        Username: ${username} \n
-        Password: ${password}`);
-  };
+  // handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const { email, name, cell } = this.state;
+  //   alert(`Your registration detail: \n 
+  //       Email: ${email} \n 
+  //       Username: ${name} \n
+  //       Password: ${cell}`);
+  // };
+  handleSubmit = event => {
+    event.preventDefault()
+    const form = this.JoinForm.current
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: this.encode({
+        "form-name": form.getAttribute("name"),
+        ...this.state,
+      }),
+    })
+      .then(() => navigate("/"))
+      .catch(error => alert(error))
+
+    this.setState({
+      name: "",
+      email: "",
+      // message: "",
+    })
+  }
+
 
   render() {
     if (!this.props.show) return null;
@@ -145,7 +174,7 @@ class MasterForm extends React.Component {
             </a>
           </header>
 
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit} name="JoinForm" data-netlify="true">
             <Step0 currentStep={this.state.currentStep} />
 
             <Step1
@@ -163,7 +192,6 @@ class MasterForm extends React.Component {
 
             <Step2
               currentStep={this.state.currentStep}
-              // handleChange={this.handleChange}
               state={this.state}
             />
 

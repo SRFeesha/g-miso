@@ -7,10 +7,16 @@ import Button from "../Button";
 import style from "./MasterForm.module.css";
 import { navigate } from "gatsby"
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
 class MasterForm extends React.Component {
   constructor(props) {
     super(props);
-    this.JoinForm = React.createRef()
+    // this.ContactForm = React.createRef()
     this.state = {
       currentStep: 0,
       currentTitle: "Come fare parte di Miso",
@@ -29,11 +35,7 @@ class MasterForm extends React.Component {
     this._prev = this._prev.bind(this);
     // this.setTitle = this.setTitle.bind(this)
   }
-  encode = data => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&")
-  }
+ 
 
 
   _next() {
@@ -134,26 +136,41 @@ class MasterForm extends React.Component {
   //       Username: ${name} \n
   //       Password: ${cell}`);
   // };
-  handleSubmit = event => {
-    event.preventDefault()
-    const form = this.JoinForm.current
+  // handleSubmit = event => {
+  //   event.preventDefault()
+  //   const form = this.ContactForm.current
+  //   console.warn(form);
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: this.encode({
+  //       "form-name": form.getAttribute("name"),
+  //       ...this.state,
+  //     }),
+  //   })
+  //     .then(() => navigate("/"))
+  //     .catch(error => alert(error))
+
+  //   this.setState({
+  //     name: "",
+  //     email: "",
+  //     // message: "",
+  //   })
+  // }
+
+  handleSubmit = e => {
+    // e.preventDefault()
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: this.encode({
-        "form-name": form.getAttribute("name"),
-        ...this.state,
-      }),
+      body: encode({ "form-name": "uniscitiANoi", ...this.state })
     })
-      .then(() => navigate("/"))
-      .catch(error => alert(error))
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
 
-    this.setState({
-      name: "",
-      email: "",
-      // message: "",
-    })
-  }
+    e.preventDefault();
+  };
 
 
   render() {
@@ -174,7 +191,8 @@ class MasterForm extends React.Component {
             </a>
           </header>
 
-          <form onSubmit={this.handleSubmit} name="JoinForm" data-netlify="true">
+          {/* <form onSubmit={this.handleSubmit} name="JoinForm" data-netlify="true"> */}
+          <form name="uniscitiANoi" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
             <Step0 currentStep={this.state.currentStep} />
 
             <Step1

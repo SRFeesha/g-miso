@@ -39,7 +39,7 @@ class Step2 extends React.Component {
           <p>Consenso alla privacy: </p>
           <p>{privacy}</p>
         </div>
-        <button>Unisciti a Miso</button>
+        <button type="submit">Unisciti a Miso</button>
       </div>
     );
   }

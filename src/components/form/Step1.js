@@ -8,6 +8,8 @@ class Step1 extends React.Component {
     }
     return (
       <div className="form-group">
+        <input type="hidden" name="form-name" value="uniscitiANoi" />
+
         <label htmlFor="name">Nome Completo</label>
         <input
           className="form-control"

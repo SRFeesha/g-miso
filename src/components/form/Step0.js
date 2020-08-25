@@ -32,7 +32,7 @@ class Step0 extends React.Component {
             Non ti senti pronto a prenderti l'impegno ma vuoi comunque
             sostenerci?{' '}
             <a
-              className="discretelink"
+              // className="discretelink"
               href="https://www.instagram.com/miso.associazione/"
               target="_blank"
               rel="noreferrer"

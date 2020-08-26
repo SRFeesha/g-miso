@@ -4,7 +4,6 @@ import Spacer from '../Spacer'
 class Step0 extends React.Component {
   
   render() {
-    const title = 'titolo 1';
     if (this.props.currentStep !== 0) {
       return null
     }

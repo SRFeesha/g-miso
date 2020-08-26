@@ -5,18 +5,14 @@ import Step2 from "./Step2";
 import Step3 from "./Step3";
 import Button from "../Button";
 import style from "./MasterForm.module.css";
-import { navigate } from "gatsby"
+// import { navigate } from "gatsby"
 
-const encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
-}
+
 
 class MasterForm extends React.Component {
   constructor(props) {
     super(props);
-    // this.ContactForm = React.createRef()
+    this.MasterForm = React.createRef()
     this.state = {
       currentStep: 0,
       currentTitle: "Come fare parte di Miso",
@@ -35,8 +31,6 @@ class MasterForm extends React.Component {
     this._prev = this._prev.bind(this);
     // this.setTitle = this.setTitle.bind(this)
   }
- 
-
 
   _next() {
     let currentStep = this.state.currentStep;
@@ -160,16 +154,25 @@ class MasterForm extends React.Component {
 
   handleSubmit = e => {
     // e.preventDefault()
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "uniscitiANoi", ...this.state })
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
-
     e.preventDefault();
+
+    const encode = data => {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&")
+    }
+    const form = this.MasterForm.current;
+    console.log(form);
+
+
+    // fetch("/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: encode({ "form-name": "uniscitiANoi", ...this.state })
+    // })
+    //   .then(() => alert("Success!"))
+    //   .catch(error => alert(error));
+
   };
 
 
@@ -192,7 +195,7 @@ class MasterForm extends React.Component {
           </header>
 
           {/* <form onSubmit={this.handleSubmit} name="JoinForm" data-netlify="true"> */}
-          <form name="uniscitiANoi" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+          <form onSubmit={this.handleSubmit} name="uniscitiANoi" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
             <Step0 currentStep={this.state.currentStep} />
 
             <Step1

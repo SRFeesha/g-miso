@@ -162,7 +162,7 @@ class MasterForm extends React.Component {
         .join("&")
     }
     const form = this.MasterForm.current;
-    console.log(form);
+    console.log(encode);
 
 
     // fetch("/", {
@@ -195,7 +195,7 @@ class MasterForm extends React.Component {
           </header>
 
           {/* <form onSubmit={this.handleSubmit} name="JoinForm" data-netlify="true"> */}
-          <form onSubmit={this.handleSubmit} name="uniscitiANoi" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+          <form onSubmit={this.handleSubmit} name="uniscitiANoi" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
             <Step0 currentStep={this.state.currentStep} />
 
             <Step1

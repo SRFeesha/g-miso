@@ -1,45 +1,68 @@
 import React from "react";
 import style from "./MasterForm.module.css";
-// import Button from "../Button";
 
 class Step2 extends React.Component {
   render() {
     if (this.props.currentStep !== 2) {
       return null;
     }
-
-    // I use a custom variable because the value is true or false — and I want to show an italian string
-    let privacy = "";
-    this.props.state.privacy === true
-      ? (privacy = "Accettata")
-      : (privacy = "Non accettata");
-
     return (
       <div className="form-group">
-        <p>
-          Ti invitiamo a controllare un attimo i dati inseriti. Se ti rendi
-          conto che c'è qualcosa di sbagliato puoi modificarli cliccando su
-          indietro.
-        </p>
-        <div className={style.riepilogo}>
-          <p>Nome: </p>
-          <p>{this.props.state.name}</p>
-          <p>Comune di residenza: </p>
-          <p>{this.props.state.city}</p>
-          <p>Indirizzo di residenza: </p>
-          <p>{this.props.state.address}</p>
-          <p>Nato il: </p>
-          <p>{this.props.state.birth}</p>
-          <p>Nato a: </p>
-          <p>{this.props.state.born}</p>
-          <p>E-Mail: </p>
-          <p>{this.props.state.email}</p>
-          <p>Cellulare: </p>
-          <p>{this.props.state.cell}</p>
-          <p>Consenso alla privacy: </p>
-          <p>{privacy}</p>
-        </div>
-        <button type="submit">Unisciti a Miso</button>
+
+        <label htmlFor="city">Comune di Residenza</label>
+        <input
+          className="form-control"
+          id="city"
+          name="city"
+          type="text"
+          placeholder="Roma"
+          value={this.props.city} 
+          onChange={this.props.handleChange} 
+        />
+
+        <label htmlFor="address">Indirizzo di Residenza</label>
+        <input
+          className="form-control"
+          id="birth"
+          name="address"
+          type="text"
+          placeholder="Via Garibaldi 3"
+          value={this.props.address} 
+          onChange={this.props.handleChange} 
+        />
+
+        <label htmlFor="birth">Data di nascita</label>
+        <input
+          className="form-control"
+          id="birth"
+          name="birth"
+          type="date"
+          value={this.props.birth} 
+          onChange={this.props.handleChange} 
+        />
+
+        <label htmlFor="born">Comune di nascita</label>
+        <input
+          className="form-control"
+          id="born"
+          name="born"
+          type="text"
+          placeholder="Milano"
+          value={this.props.born} 
+          onChange={this.props.handleChange} 
+        />
+
+        <label htmlFor="cf">Codice Fiscale</label>
+        <input
+          className="form-control"
+          id="cf"
+          name="cf"
+          type="text"
+          placeholder="MRIRSS86T21A532O"
+          value={this.props.cf} 
+          onChange={this.props.handleChange} 
+        />
+
       </div>
     );
   }

@@ -3,6 +3,7 @@ import Step0 from "./Step0";
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
+import Step4 from "./Step4";
 import Button from "../Button";
 import style from "./MasterForm.module.css";
 // import { navigate } from "gatsby"
@@ -21,6 +22,8 @@ class MasterForm extends React.Component {
       currentStep: 0,
       currentTitle: "Come fare parte di Miso",
       name: "",
+      surname: "",
+      cf: "",
       city: "",
       address: "",
       birth: "",
@@ -33,15 +36,13 @@ class MasterForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this._next = this._next.bind(this);
     this._prev = this._prev.bind(this);
-    // this.setTitle = this.setTitle.bind(this)
-    // this.encode = this.encode.bind(this);
   }
 
   _next() {
     let currentStep = this.state.currentStep;
     let currentTitle = this.state.currentTitle;
     // If the current step is 1 or 2, then add one on "next" button click
-    currentStep = currentStep >= 2 ? 3 : currentStep + 1;
+    currentStep = currentStep >= 3 ? 4 : currentStep + 1;
     currentTitle = this.setTitle(currentStep);
     this.setState({
       currentStep: currentStep,
@@ -62,7 +63,7 @@ class MasterForm extends React.Component {
   get previousButton() {
     let currentStep = this.state.currentStep;
     // If the current step is not 1, then render the "previous" button
-    if (currentStep !== 0) {
+    if (currentStep > 0 && currentStep < 4) {
       return (
         <div data-pag="prev">
           <Button onClick={this._prev} type="secondary">
@@ -71,7 +72,6 @@ class MasterForm extends React.Component {
         </div>
       );
     }
-    // ...else return nothing
     return null;
   }
   get nextButton() {
@@ -86,32 +86,57 @@ class MasterForm extends React.Component {
         </div>
       );
     }
-    // ...else render nothing
+    // If it's the 3rd step render the submit form button
+    else if (currentStep === 3){
+      return (
+        <div data-pag="next">
+          <Button type="submit" onClick={this.handleSubmit}>
+            Invia
+          </Button>
+        </div>
+      )
+    }
+    // Enhance UX with confirmation button
+    else if (currentStep === 4){
+      return (
+        <div data-pag="next">
+          <Button type="secondary" onClick={this.props.handleClose}>
+            Ok, ho Capito
+          </Button>
+        </div>
+      )
+    }
     return null;
   }
 
   // Use the submitted data to set the state
   handleChange(event) {
     const { name, value, checked } = event.target;
-    name === "privacy" ? this.setState({[name]: checked,}) : this.setState({[name]: value}) 
+    name === "privacy" 
+      ? this.setState({[name]: checked,}) 
+      : this.setState({[name]: value}) 
   }
 
   setTitle(step) {
     let title = "";
     switch (step) {
       case 0:
-        title = "Come fare parte di Miso";
+        title = "Come fare parte della Miso";
         break;
       case 1:
         title = "Inserisci i tuoi dati";
         break;
       case 2:
-        title = "Conferma i tuoi dati";
+        title = "Inserisci i tuoi dati";
         break;
       case 3:
+        title = "Conferma i tuoi dati";
+        break;
+      case 4:
         title = "Tutto è andato a buon fine!";
         break;
       default:
+        title = "Errore nel titolo";
         break;
     }
     return title;
@@ -119,28 +144,28 @@ class MasterForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    // const form = this.formRef.current;
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ 
-        // "form-name": form.getAttribute("name"), 
         "form-name": "uniscitiANoi", 
         ...this.state 
       })
     })
-      .then(() => alert("Success!"))
+      // .then(() => alert("Success!"))
+      .then(() => this._next())
       .catch(error => alert(error));
   };
 
   render() {
     if (!this.props.show) return null;
+    const { currentStep, name, surname, email, privacy, cell, cf, city, address, birth, born } = this.state
 
     return (
       <React.Fragment>
         <div className={style.modal}>
           <header className={style.stepper}>
-            <p>Fase {this.state.currentStep} di 3</p>
+            <p>Fase {this.state.currentStep} di 4</p>
             <h3>{this.state.currentTitle}</h3>
             <a
               className={style.close}
@@ -151,30 +176,37 @@ class MasterForm extends React.Component {
             </a>
           </header>
 
-          {/* <form onSubmit={this.handleSubmit} ref={this.formRef} name="uniscitiANoi" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"> */}
           <form onSubmit={this.handleSubmit} name="uniscitiANoi" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-            <Step0 currentStep={this.state.currentStep} />
+            <Step0 currentStep={currentStep} />
 
             <Step1
-              currentStep={this.state.currentStep}
+              currentStep={currentStep}
               handleChange={this.handleChange}
-              name={this.state.name}
-              city={this.state.city}
-              address={this.state.address}
-              birth={this.state.birth}
-              born={this.state.born}
-              email={this.state.email}
-              cell={this.state.cell}
-              privacy={this.state.privacy}
+              name={name}
+              surname={surname}
+              email={email}
+              privacy={privacy}
+              cell={cell}
             />
 
             <Step2
-              currentStep={this.state.currentStep}
-              state={this.state}
+              currentStep={currentStep}
+              handleChange={this.handleChange}
+              city={city}
+              address={address}
+              birth={birth}
+              born={born}
+              cf={cf}
+              privacy={privacy}
             />
 
             <Step3
-              currentStep={this.state.currentStep}
+              currentStep={currentStep}
+              state={this.state}
+            />
+
+            <Step4
+              currentStep={currentStep}
               // handleChange={this.handleChange}
             />
           </form>

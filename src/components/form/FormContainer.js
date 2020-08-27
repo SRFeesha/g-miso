@@ -34,7 +34,7 @@ class FormContainer extends React.Component {
           <input type="text" name="address" />
           <input type="date" name="birth" />
           <input type="text" name="born" />
-          <input type="email" name="email" />
+          <input type="text" name="cf" />
           <input type="tel" name="cell" />
           <input type="email" name="email" />
           <input type="checkbox" name="privacy" />

@@ -17,7 +17,9 @@ const Footer = class extends React.Component {
             <Col lg={2} offset={{ lg: 1 }} className={style.col}>
               <Link to="/">Home</Link>
               <Link to="/blog">Blog</Link>
-              <a href="https://www.instagram.com/studio.miso/">Instagram</a>
+              <a href="https://www.instagram.com/miso.associazione/">
+                Instagram
+              </a>
               <a href="https://www.facebook.com/studiomisobrescia/">Facebook</a>
               <a href="mailto:studiomisobrescia@gmail.com">Inviaci una mail</a>
             </Col>

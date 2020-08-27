@@ -45,19 +45,6 @@
   z-index: -1;
 }
 
-/* .img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -60%;
-  right: 0;
-  margin-left: auto auto;
-  width: 519px;
-  height: 676px;
-  height: 100%;
-  z-index: 0;
-} */
-
 .hero {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -72,15 +59,16 @@
   .hero .headline {
     grid-column: 1 / 9;
   }
+
   .hero .headline p {
     margin-top: 1rem;
     width: 75%;
   }
-  .img {
+
+  .imgContainer {
     grid-column: 1 / 9;
     grid-row: 2;
     width: 80vw;
-    /* width: 100%; */
     margin-left: 10vw;
     margin-top: -20vw;
   }

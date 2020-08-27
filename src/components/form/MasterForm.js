@@ -7,8 +7,6 @@ import Button from "../Button";
 import style from "./MasterForm.module.css";
 // import { navigate } from "gatsby"
 
-
-
 class MasterForm extends React.Component {
   constructor(props) {
     super(props);
@@ -129,28 +127,6 @@ class MasterForm extends React.Component {
   }
 
 
-  // handleSubmit = event => {
-  //   event.preventDefault()
-  //   const form = this.ContactForm.current
-  //   console.warn(form);
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: this.encode({
-  //       "form-name": form.getAttribute("name"),
-  //       ...this.state,
-  //     }),
-  //   })
-  //     .then(() => navigate("/"))
-  //     .catch(error => alert(error))
-
-  //   this.setState({
-  //     name: "",
-  //     email: "",
-  //     // message: "",
-  //   })
-  // }
-
   handleSubmit = e => {
     e.preventDefault();
     const form = this.formRef.current;
@@ -163,7 +139,7 @@ class MasterForm extends React.Component {
         ...this.state 
       })
     })
-      .then(() => alert("Success!" + form.getAttribute("name")))
+      .then(() => alert("Success!"))
       .catch(error => alert(error));
   };
 

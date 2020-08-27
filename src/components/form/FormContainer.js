@@ -28,7 +28,7 @@ class FormContainer extends React.Component {
         </Button>
         <MasterForm show={this.state.show} handleClose={this.hideModal} />
 
-        <form name="uniscitiANoi" netlify netlify-honeypot="bot-field" hidden>
+        <form name="uniscitiANoi" data-netlify="true" netlify-honeypot="bot-field" hidden>
           <input type="text" name="name" />
           <input type="text" name="city" />
           <input type="text" name="address" />

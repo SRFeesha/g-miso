@@ -9,6 +9,7 @@ class Step1 extends React.Component {
     return (
       <div className="form-group">
         <input type="hidden" name="form-name" value="uniscitiANoi" />
+        <input type="hidden" name="netlify-honeypot" value="bot-field" />
 
         <label htmlFor="name">Nome Completo</label>
         <input

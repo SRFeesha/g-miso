@@ -33,6 +33,21 @@
     font-weight: 500;
 }
 
+.submit .btn {
+    padding: 1.1rem 2rem 1rem;
+    font-family: var(--text-heading);
+    color: var(--color-background);
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 1;
+    background-color: var(--color-blog);
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: all .45s ease-in-out;
+    letter-spacing: .1em;
+    font-weight: 500;
+}
+
 .btn:hover {
     color: var(--color-background);
     background-color: var(--color-blog);

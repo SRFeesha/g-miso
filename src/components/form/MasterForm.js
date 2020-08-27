@@ -12,7 +12,7 @@ import style from "./MasterForm.module.css";
 class MasterForm extends React.Component {
   constructor(props) {
     super(props);
-    this.MasterForm = React.createRef()
+    this.formRef = React.createRef();
     this.state = {
       currentStep: 0,
       currentTitle: "Come fare parte di Miso",
@@ -30,7 +30,14 @@ class MasterForm extends React.Component {
     this._next = this._next.bind(this);
     this._prev = this._prev.bind(this);
     // this.setTitle = this.setTitle.bind(this)
+    this.encode = this.encode.bind(this);
   }
+
+  encode = data => {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&")
+    };
 
   _next() {
     let currentStep = this.state.currentStep;
@@ -121,15 +128,7 @@ class MasterForm extends React.Component {
     return title;
   }
 
-  // Trigger an alert on form submission
-  // handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   const { email, name, cell } = this.state;
-  //   alert(`Your registration detail: \n 
-  //       Email: ${email} \n 
-  //       Username: ${name} \n
-  //       Password: ${cell}`);
-  // };
+
   // handleSubmit = event => {
   //   event.preventDefault()
   //   const form = this.ContactForm.current
@@ -153,26 +152,19 @@ class MasterForm extends React.Component {
   // }
 
   handleSubmit = e => {
-    // e.preventDefault()
     e.preventDefault();
+    const form = this.formRef.current;
 
-    const encode = data => {
-      return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&")
-    }
-    const form = this.MasterForm.current;
-    console.log(encode);
-
-
-    // fetch("/", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //   body: encode({ "form-name": "uniscitiANoi", ...this.state })
-    // })
-    //   .then(() => alert("Success!"))
-    //   .catch(error => alert(error));
-
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: this.encode({ 
+        "form-name": form.getAttribute("name"), 
+        ...this.state 
+      })
+    })
+      .then(() => alert("Success!" + form.getAttribute("name")))
+      .catch(error => alert(error));
   };
 
 
@@ -195,7 +187,7 @@ class MasterForm extends React.Component {
           </header>
 
           {/* <form onSubmit={this.handleSubmit} name="JoinForm" data-netlify="true"> */}
-          <form onSubmit={this.handleSubmit} name="uniscitiANoi" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+          <form onSubmit={this.handleSubmit} ref={this.formRef} name="uniscitiANoi" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
             <Step0 currentStep={this.state.currentStep} />
 
             <Step1

@@ -21,19 +21,19 @@ const CosaFacciamo = (props) => {
         <Row>
           <Col md={3} sm={5} xs={7}>
             <FakeCard
+              img={imgCinema}
+              alt="Miso mentre filma per un cortometraggio"
+              title="Cinema"
+              text="Mettiamo la nostra attrezzatura a disposizione dei cineasti e organizziamo insieme le riprese. Abbiamo fondato nel 2019 il Brixia Film Festival, festival internazionale di cortometraggi."
+            />
+          </Col>
+          <Col md={3} sm={5} xs={7} offset={{ md: 1, sm: 3, xs: 1 }}>
+            <FakeCard
               img={imgTeatro}
               alt="Miso a teatro"
               title="Teatro"
               text="Ogni anno presentiamo una rassegna di spettacoli teatrali originali. 
               Tutti gli aspetti dalla regia, scenografia, costumi, e musiche di scena,  sono curate direttamente dai nostri Associati. "
-            />
-          </Col>
-          <Col md={3} sm={5} xs={7} offset={{ md: 1, sm: 3, xs: 1 }}>
-            <FakeCard
-              img={imgCinema}
-              alt="Miso mentre filma per un cortometraggio"
-              title="Cinema"
-              text="Mettiamo la nostra attrezzatura a disposizione dei cineasti e organizziamo insieme le riprese. Abbiamo fondato nel 2019 il Brixia Film Festival, festival internazionale di cortometraggi."
             />
           </Col>
         </Row>

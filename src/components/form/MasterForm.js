@@ -7,6 +7,12 @@ import Button from "../Button";
 import style from "./MasterForm.module.css";
 // import { navigate } from "gatsby"
 
+function encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+};
+
 class MasterForm extends React.Component {
   constructor(props) {
     super(props);
@@ -28,14 +34,8 @@ class MasterForm extends React.Component {
     this._next = this._next.bind(this);
     this._prev = this._prev.bind(this);
     // this.setTitle = this.setTitle.bind(this)
-    this.encode = this.encode.bind(this);
+    // this.encode = this.encode.bind(this);
   }
-
-  encode = data => {
-      return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&")
-    };
 
   _next() {
     let currentStep = this.state.currentStep;
@@ -92,17 +92,8 @@ class MasterForm extends React.Component {
 
   // Use the submitted data to set the state
   handleChange(event) {
-    // console.log(event.target);
-    const { name, value } = event.target;
-    // this.setState({
-    //   [name]: value,
-    // });
-    // if (name === "privacy")
-    //   this.setState({
-    //     [name]: event.target.checked,
-    //   });
-    
-    name === "privacy" ? this.setState({[name]: event.target.checked,}) : this.setState({[name]: value}) 
+    const { name, value, checked } = event.target;
+    name === "privacy" ? this.setState({[name]: checked,}) : this.setState({[name]: value}) 
   }
 
   setTitle(step) {
@@ -126,23 +117,21 @@ class MasterForm extends React.Component {
     return title;
   }
 
-
   handleSubmit = e => {
     e.preventDefault();
-    const form = this.formRef.current;
-
+    // const form = this.formRef.current;
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: this.encode({ 
-        "form-name": form.getAttribute("name"), 
+      body: encode({ 
+        // "form-name": form.getAttribute("name"), 
+        "form-name": "uniscitiANoi", 
         ...this.state 
       })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
   };
-
 
   render() {
     if (!this.props.show) return null;
@@ -162,8 +151,8 @@ class MasterForm extends React.Component {
             </a>
           </header>
 
-          {/* <form onSubmit={this.handleSubmit} name="JoinForm" data-netlify="true"> */}
-          <form onSubmit={this.handleSubmit} ref={this.formRef} name="uniscitiANoi" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+          {/* <form onSubmit={this.handleSubmit} ref={this.formRef} name="uniscitiANoi" method="POST" data-netlify="true" data-netlify-honeypot="bot-field"> */}
+          <form onSubmit={this.handleSubmit} name="uniscitiANoi" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
             <Step0 currentStep={this.state.currentStep} />
 
             <Step1

@@ -9,19 +9,16 @@ class Step0 extends React.Component {
     }
     return (
       <div className="form-group">
-        <p>
-          Miso è un'associazione no profit, per entrare a farne parte sono
-          necessari alcuni step
+        <p className="big">
+          Miso è un'associazione no profit, per entrare a farne parte ufficialmente dovrai tesserarti
         </p>
         <p>
-          Per entrare ufficialmente in Miso devi tesserarti. I passaggi
-          richiesti sono:
+          I passaggi richiesti sono:
         </p>
         <ol>
           <li>Inserire i tuoi dati (nome, cognome, codice fiscale ecc)</li>
           <li>
-            Versare la quota di iscrizione (5€ — è un costo simbolico e verrà
-            chiesto solo all'inizio)
+            Versare la quota di iscrizione (5€ — è un costo simbolico che coprirà l'iscrizione all'associazione per un anno)
           </li>
           <li>Miso inserirà la tua iscrizione nel nostro albo</li>
         </ol>

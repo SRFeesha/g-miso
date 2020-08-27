@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./MasterForm.module.css";
+import Spacer from '../Spacer'
 
 class Step1 extends React.Component {
   render() {
@@ -11,58 +12,27 @@ class Step1 extends React.Component {
         <input type="hidden" name="form-name" value="uniscitiANoi" />
         <input type="hidden" name="netlify-honeypot" value="bot-field" />
 
-        <label htmlFor="name">Nome Completo</label>
+        <label htmlFor="name">Nome</label>
         <input
           className="form-control"
           id="name"
           name="name"
           type="text"
-          placeholder="Mario Rossi"
+          placeholder="Mario"
           value={this.props.name} 
-          onChange={this.props.handleChange} // Prop: Puts data into state
+          onChange={this.props.handleChange} 
+          required
         />
 
-        <label htmlFor="city">Comune di Residenza</label>
+        <label htmlFor="surname">Cognome</label>
         <input
           className="form-control"
-          id="city"
-          name="city"
+          id="surname"
+          name="surname"
           type="text"
-          placeholder="Roma"
-          value={this.props.city} 
-          onChange={this.props.handleChange} // Prop: Puts data into state
-        />
-
-        <label htmlFor="address">Indirizzo di Residenza</label>
-        <input
-          className="form-control"
-          id="birth"
-          name="address"
-          type="address"
-          placeholder="Via Garibaldi 3"
-          value={this.props.address} 
-          onChange={this.props.handleChange} // Prop: Puts data into state
-        />
-
-        <label htmlFor="birth">Data di nascita</label>
-        <input
-          className="form-control"
-          id="birth"
-          name="birth"
-          type="date"
-          value={this.props.birth} 
-          onChange={this.props.handleChange} // Prop: Puts data into state
-        />
-
-        <label htmlFor="born">Comune di nascita</label>
-        <input
-          className="form-control"
-          id="born"
-          name="born"
-          type="text"
-          placeholder="Milano"
-          value={this.props.born} 
-          onChange={this.props.handleChange} // Prop: Puts data into state
+          placeholder="Rossi"
+          value={this.props.surname} 
+          onChange={this.props.handleChange} 
         />
 
         <label htmlFor="email">E-mail</label>
@@ -73,7 +43,7 @@ class Step1 extends React.Component {
           type="email"
           placeholder="mario.rossi@gmail.com"
           value={this.props.email} 
-          onChange={this.props.handleChange} // Prop: Puts data into state
+          onChange={this.props.handleChange} 
         />
 
         <label htmlFor="cell">Cellulare</label>
@@ -85,9 +55,10 @@ class Step1 extends React.Component {
           placeholder="333 123 1234"
           inputmask="'mask': '999 999 9999'"
           value={this.props.cell} 
-          onChange={this.props.handleChange} // Prop: Puts data into state
+          onChange={this.props.handleChange} 
         />
 
+        <Spacer h={4} />
         <div className={style.terms}>
           <input
             className="checkbox"
@@ -96,7 +67,7 @@ class Step1 extends React.Component {
             type="checkbox"
             value={this.props.privacy} 
             defaultChecked={this.props.privacy}
-            onClick={this.props.handleChange} // Prop: Puts data into state
+            onClick={this.props.handleChange} 
           />
           <label htmlFor="privacy" className={style.privacy}>
             Ai sensi del D.Lgs 196/2003 Io sottoscritto/a {this.props.name}{" "}

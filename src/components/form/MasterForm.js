@@ -7,7 +7,7 @@ import Button from "../Button";
 import style from "./MasterForm.module.css";
 // import { navigate } from "gatsby"
 
-function encode = data => {
+const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&")
@@ -184,9 +184,8 @@ class MasterForm extends React.Component {
             {this.nextButton}
           </footer>
         </div>
-        <div className={style.scrim}>
-
-        </div>
+        
+        <div className={style.scrim}></div>
       </React.Fragment>
     );
   }

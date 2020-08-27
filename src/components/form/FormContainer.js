@@ -30,6 +30,7 @@ class FormContainer extends React.Component {
 
         <form name="uniscitiANoi" data-netlify="true" netlify-honeypot="bot-field" hidden>
           <input type="text" name="name" />
+          <input type="text" name="surname" />
           <input type="text" name="city" />
           <input type="text" name="address" />
           <input type="date" name="birth" />

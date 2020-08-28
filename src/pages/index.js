@@ -1,11 +1,12 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Hero from '../components/Hero'
-import CosaFacciamo from '../components/CosaFacciamo'
+import Hero from '../components/hero/Hero'
+import CosaFacciamo from '../components/cosaFacciamo/CosaFacciamo'
 import Motivazioni from '../components/Motivazioni'
-import CosaDiconoDiNoi from '../components/CosaDiconoDiNoi'
-import Sostienici from '../components/Sostienici'
+import CosaDiconoDiNoi from '../components/CosaDiconoDiNoi/CosaDiconoDiNoi'
 import Social from '../components/Social'
+import ChiCiSostiene from '../components/ChiCiSostiene'
+import Dona from '../components/dona/Dona'
 
 const Home = () => (
   <Layout>
@@ -13,7 +14,8 @@ const Home = () => (
     <CosaFacciamo />
     <Motivazioni />
     <CosaDiconoDiNoi />
-    <Sostienici />
+    <ChiCiSostiene />
+    <Dona />
     <Social />
   </Layout>
 )

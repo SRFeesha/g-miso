@@ -133,6 +133,13 @@ blockquote {
 }
 
 /* UTILITY  */
+.layout-container{
+    max-width: 1066px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px;
+  }
+s  
 .full-bleed {
     width: 100vw;
     margin-left: 50%;
@@ -161,3 +168,16 @@ blockquote {
     max-width: 100vw;
 }
 
+.sponsor-parent {
+    display: inline-block;
+}
+
+.sponsor-parent img {
+    width: 134px;
+}
+
+@media only screen and (max-width: 740px) {
+    .sponsor-parent img {
+      width: 100px;
+    }
+  }

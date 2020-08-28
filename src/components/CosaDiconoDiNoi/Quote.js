@@ -1,6 +1,6 @@
 import React from 'react'
 import QuoteStyle from './Quote.module.css'
-import Logo from './Logo'
+// import Logo from '../Logo'
 
 const Quote = (props) => {
   return (
@@ -9,7 +9,10 @@ const Quote = (props) => {
       <blockquote>
         <p>{props.cit}</p>
         <footer>
-          <Logo logo={props.logo} />
+          {/* <Logo logo={props.logo} /> */}
+          <div className="sponsor-parent">
+            <img src={props.logo} alt={props.alt} />
+          </div>
           <div className={QuoteStyle.from}>
             <cite>{props.author}</cite>
             <p>{props.detail}</p>

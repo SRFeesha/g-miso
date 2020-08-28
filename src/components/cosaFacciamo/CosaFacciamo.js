@@ -1,12 +1,34 @@
 import React from 'react'
-import ShadowTitle from './ShadowTitle'
-import FakeCard from './FakeCard'
-// import imgTeatro from '../img/Teatro.jpg'
-import imgTeatro from '../img/Teatro.png'
-import imgCinema from '../img/Cinema.jpg'
-import Spacer from './Spacer'
-import Callout from './Callout'
+import ShadowTitle from '../ShadowTitle'
+import style from './CosaFacciamo.module.css'
+import Spacer from '../Spacer'
+import Form from '../form/FormContainer'
+import imgTeatro from '../../img/Teatro.png'
+import imgCinema from '../../img/Cinema.jpg'
 import { Container, Row, Col } from 'react-grid-system'
+
+const FakeCard = (props) => {
+  return (
+    <div className={style.FakeCard}>
+      <img className={style.fakeImg} src={props.img} alt={props.alt} />
+      <Spacer h={3} />
+      <h4>{props.title}</h4>
+      <hr className="transparent" />
+      <p className="big">{props.text}</p>
+      <Spacer h={7} />
+    </div>
+  )
+}
+
+const Callout = (props) => {
+  return (
+    <div className={CS.callout}>
+      <p className="giant transparent">{props.text}</p>
+      <Form />
+      {/* <Button>{props.cta}</Button> */}
+    </div>
+  )
+}
 
 const CosaFacciamo = (props) => {
   return (
@@ -15,6 +37,7 @@ const CosaFacciamo = (props) => {
       <p className="bigger transparent">
         Sosteniamo i giovani creativi nel mondo dello spettacolo
       </p>
+
       <Spacer h={9} />
 
       <Container>

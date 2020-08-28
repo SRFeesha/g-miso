@@ -1,5 +1,4 @@
 import React from 'react'
-import Section from './Section'
 import ShadowTitle from './ShadowTitle'
 import Spacer from './Spacer'
 import LogoInsta from '../img/Instagram Logo.svg'
@@ -10,7 +9,7 @@ import { Container, Row, Col } from 'react-grid-system'
 
 const Social = () => {
   return (
-    <Section id="social">
+    <section id="social">
       <Spacer h={12} />
       <Container>
         <Row>
@@ -56,7 +55,7 @@ const Social = () => {
         </Row>
       </Container>
       <Spacer h={10} />
-    </Section>
+    </section>
   )
 }
 

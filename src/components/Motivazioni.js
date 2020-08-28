@@ -1,12 +1,11 @@
 import React from 'react'
-import Section from './Section'
 import ShadowTitle from './ShadowTitle'
 import Spacer from './Spacer'
 import { Container, Row, Col } from 'react-grid-system'
 
 const Motivazioni = () => {
   return (
-    <Section id="motivazioni">
+    <section id="motivazioni">
       <Spacer h={12} />
       <Container>
         <Row>
@@ -24,7 +23,7 @@ const Motivazioni = () => {
         </Row>
       </Container>
       <Spacer h={13} />
-    </Section>
+    </section>
   )
 }
 

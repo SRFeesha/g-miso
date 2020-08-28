@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Spacer from '..//Spacer'
 import style from './Footer.module.css'
-import logo from '../img/logo/logo_white_48.png'
+import logo from '../../img/logo/logo_white_48.png'
 import { Container, Row, Col } from 'react-grid-system'
-import Spacer from './Spacer'
 
 const Footer = class extends React.Component {
   render() {

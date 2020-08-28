@@ -1,20 +1,33 @@
-import React from "react";
-import style from "./MasterForm.module.css";
+import React from 'react'
+import style from './MasterForm.module.css'
 // import Button from "../Button";
 
 class Step3 extends React.Component {
   render() {
-    if (this.props.currentStep !== 3) {
-      return null;
+    const {
+      currentStep,
+      name,
+      surname,
+      email,
+      privacy,
+      cell,
+      cf,
+      city,
+      address,
+      birth,
+      born,
+    } = this.props.state
+    // Usinga custom variable because the value is true or false — and I want to show an italian string
+    let privacyLabel = ''
+
+    if (currentStep !== 3) {
+      return null
     }
 
-    // I use a custom variable because the value is true or false — and I want to show an italian string
-    const { currentStep, name, surname, email, privacy, cell, cf, city, address, birth, born } = this.props.state
-    let privacyLabel = "";
     privacy === true
-      ? (privacyLabel = "Accettata")
-      : (privacyLabel = "Non accettata");
-    
+      ? (privacyLabel = 'Accettata')
+      : (privacyLabel = 'Non accettata')
+
     return (
       <div className="form-group">
         <p>
@@ -25,6 +38,9 @@ class Step3 extends React.Component {
         <div className={style.riepilogo}>
           <p>Nome: </p>
           <p>{name}</p>
+
+          <p>Cognome: </p>
+          <p>{surname}</p>
 
           <p>Comune di residenza: </p>
           <p>{city}</p>
@@ -51,8 +67,8 @@ class Step3 extends React.Component {
           <p>{privacyLabel}</p>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Step3;
+export default Step3

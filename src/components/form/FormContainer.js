@@ -1,6 +1,6 @@
 import React from 'react'
 import MasterForm from './MasterForm'
-import Button from '../Button'
+import Button from '../button/Button'
 
 class FormContainer extends React.Component {
   constructor(props) {
@@ -28,7 +28,12 @@ class FormContainer extends React.Component {
         </Button>
         <MasterForm show={this.state.show} handleClose={this.hideModal} />
 
-        <form name="uniscitiANoi" data-netlify="true" netlify-honeypot="bot-field" hidden>
+        <form
+          name="uniscitiANoi"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          hidden
+        >
           <input type="text" name="name" />
           <input type="text" name="surname" />
           <input type="text" name="city" />

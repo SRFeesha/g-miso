@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../img/logo/logo_white_48.png'
+import logo from '../../img/logo/logo_white_48.png'
 import style from './Navbar.module.css'
 import { Link } from 'gatsby'
 import { Container, Row, Col } from 'react-grid-system'
@@ -13,25 +13,24 @@ const Navbar = class extends React.Component {
     }
   }
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
-      }
-    )
-  }
+  // toggleHamburger = () => {
+  //   this.setState(
+  //     {
+  //       active: !this.state.active,
+  //     },
+  //     // after state has been updated,
+  //     () => {
+  //       // set the class in state for the navbar accordingly
+  //       this.state.active
+  //         ? this.setState({
+  //             navBarActiveClass: 'is-active',
+  //           })
+  //         : this.setState({
+  //             navBarActiveClass: '',
+  //           })
+  //     }
+  //   )
+  // }
 
   render() {
     return (
@@ -50,9 +49,6 @@ const Navbar = class extends React.Component {
             </Col>
           </Row>
         </Container>
-        {/* <div className={navStyle.container}>
-          <span className={navStyle.bigText}>Miso</span>
-        </div> */}
       </nav>
     )
   }

@@ -1,11 +1,11 @@
 import React from 'react'
+import ShadowTitle from '../ShadowTitle'
+import Spacer from '../Spacer'
 import Quote from './Quote'
-import ShadowTitle from './ShadowTitle'
-import Spacer from './Spacer'
-import { Container, Row, Col } from 'react-grid-system'
-import GiornaleDiBrescia from '../img/socialProof/logo_gdb.png'
-import Calabrone from '../img/socialProof/logo_calab.png'
 import style from './CosaDiconoDiNoi.module.css'
+import GiornaleDiBrescia from '../../img/socialProof/logo_gdb.png'
+import Calabrone from '../../img/socialProof/logo_calab.png'
+import { Container, Row, Col } from 'react-grid-system'
 
 const CosaDiconoDiNoi = () => {
   return (

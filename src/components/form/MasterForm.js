@@ -1,67 +1,67 @@
-import React from "react";
-import Step0 from "./Step0";
-import Step1 from "./Step1";
-import Step2 from "./Step2";
-import Step3 from "./Step3";
-import Step4 from "./Step4";
-import Button from "../Button";
-import style from "./MasterForm.module.css";
+import React from 'react'
+import Step0 from './Step0'
+import Step1 from './Step1'
+import Step2 from './Step2'
+import Step3 from './Step3'
+import Step4 from './Step4'
+import Button from '../button/Button'
+import style from './MasterForm.module.css'
 // import { navigate } from "gatsby"
 
-const encode = data => {
+const encode = (data) => {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&")
-};
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
 
 class MasterForm extends React.Component {
   constructor(props) {
-    super(props);
-    this.formRef = React.createRef();
+    super(props)
+    this.formRef = React.createRef()
     this.state = {
       currentStep: 0,
-      currentTitle: "Come fare parte di Miso",
-      name: "",
-      surname: "",
-      cf: "",
-      city: "",
-      address: "",
-      birth: "",
-      born: "",
-      email: "",
-      cell: "",
+      currentTitle: 'Come fare parte di Miso',
+      name: '',
+      surname: '',
+      cf: '',
+      city: '',
+      address: '',
+      birth: '',
+      born: '',
+      email: '',
+      cell: '',
       privacy: false,
-    };
+    }
     // These bindings are necessary to make `this` work in the callback
-    this.handleChange = this.handleChange.bind(this);
-    this._next = this._next.bind(this);
-    this._prev = this._prev.bind(this);
+    this.handleChange = this.handleChange.bind(this)
+    this._next = this._next.bind(this)
+    this._prev = this._prev.bind(this)
   }
 
   _next() {
-    let currentStep = this.state.currentStep;
-    let currentTitle = this.state.currentTitle;
+    let currentStep = this.state.currentStep
+    let currentTitle = this.state.currentTitle
     // If the current step is 1 or 2, then add one on "next" button click
-    currentStep = currentStep >= 3 ? 4 : currentStep + 1;
-    currentTitle = this.setTitle(currentStep);
+    currentStep = currentStep >= 3 ? 4 : currentStep + 1
+    currentTitle = this.setTitle(currentStep)
     this.setState({
       currentStep: currentStep,
       currentTitle: currentTitle,
-    });
+    })
   }
   _prev() {
-    let currentStep = this.state.currentStep;
-    let currentTitle = this.state.currentTitle;
+    let currentStep = this.state.currentStep
+    let currentTitle = this.state.currentTitle
     // If the current step is 2 or 3, then subtract one on "previous" button click
-    currentStep = currentStep <= 1 ? 0 : currentStep - 1;
-    currentTitle = this.setTitle(currentStep);
+    currentStep = currentStep <= 1 ? 0 : currentStep - 1
+    currentTitle = this.setTitle(currentStep)
     this.setState({
       currentStep: currentStep,
       currentTitle: currentTitle,
-    });
+    })
   }
   get previousButton() {
-    let currentStep = this.state.currentStep;
+    let currentStep = this.state.currentStep
     // If the current step is not 1, then render the "previous" button
     if (currentStep > 0 && currentStep < 4) {
       return (
@@ -70,12 +70,12 @@ class MasterForm extends React.Component {
             Indietro
           </Button>
         </div>
-      );
+      )
     }
-    return null;
+    return null
   }
   get nextButton() {
-    let currentStep = this.state.currentStep;
+    let currentStep = this.state.currentStep
     // If the current step is not 3, then render the "next" button
     if (currentStep < 3) {
       return (
@@ -84,10 +84,10 @@ class MasterForm extends React.Component {
             Continua
           </Button>
         </div>
-      );
+      )
     }
     // If it's the 3rd step render the submit form button
-    else if (currentStep === 3){
+    else if (currentStep === 3) {
       return (
         <div data-pag="next">
           <Button type="submit" onClick={this.handleSubmit}>
@@ -97,7 +97,7 @@ class MasterForm extends React.Component {
       )
     }
     // Enhance UX with confirmation button
-    else if (currentStep === 4){
+    else if (currentStep === 4) {
       return (
         <div data-pag="next">
           <Button type="secondary" onClick={this.props.handleClose}>
@@ -106,60 +106,72 @@ class MasterForm extends React.Component {
         </div>
       )
     }
-    return null;
+    return null
   }
 
   // Use the submitted data to set the state
   handleChange(event) {
-    const { name, value, checked } = event.target;
-    name === "privacy" 
-      ? this.setState({[name]: checked,}) 
-      : this.setState({[name]: value}) 
+    const { name, value, checked } = event.target
+    name === 'privacy'
+      ? this.setState({ [name]: checked })
+      : this.setState({ [name]: value })
   }
 
   setTitle(step) {
-    let title = "";
+    let title = ''
     switch (step) {
       case 0:
-        title = "Come fare parte della Miso";
-        break;
+        title = 'Come fare parte della Miso'
+        break
       case 1:
-        title = "Inserisci i tuoi dati";
-        break;
+        title = 'Inserisci i tuoi dati'
+        break
       case 2:
-        title = "Inserisci i tuoi dati";
-        break;
+        title = 'Inserisci i tuoi dati'
+        break
       case 3:
-        title = "Conferma i tuoi dati";
-        break;
+        title = 'Conferma i tuoi dati'
+        break
       case 4:
-        title = "Tutto è andato a buon fine!";
-        break;
+        title = 'Tutto è andato a buon fine!'
+        break
       default:
-        title = "Errore nel titolo";
-        break;
+        title = 'Errore nel titolo'
+        break
     }
-    return title;
+    return title
   }
 
-  handleSubmit = e => {
-    e.preventDefault();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ 
-        "form-name": "uniscitiANoi", 
-        ...this.state 
-      })
+  handleSubmit = (e) => {
+    e.preventDefault()
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': 'uniscitiANoi',
+        ...this.state,
+      }),
     })
       // .then(() => alert("Success!"))
       .then(() => this._next())
-      .catch(error => alert(error));
-  };
+      .catch((error) => alert(error))
+  }
 
   render() {
-    if (!this.props.show) return null;
-    const { currentStep, name, surname, email, privacy, cell, cf, city, address, birth, born } = this.state
+    if (!this.props.show) return null
+    const {
+      currentStep,
+      name,
+      surname,
+      email,
+      privacy,
+      cell,
+      cf,
+      city,
+      address,
+      birth,
+      born,
+    } = this.state
 
     return (
       <React.Fragment>
@@ -176,7 +188,13 @@ class MasterForm extends React.Component {
             </a>
           </header>
 
-          <form onSubmit={this.handleSubmit} name="uniscitiANoi" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+          <form
+            onSubmit={this.handleSubmit}
+            name="uniscitiANoi"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
             <Step0 currentStep={currentStep} />
 
             <Step1
@@ -200,10 +218,7 @@ class MasterForm extends React.Component {
               privacy={privacy}
             />
 
-            <Step3
-              currentStep={currentStep}
-              state={this.state}
-            />
+            <Step3 currentStep={currentStep} state={this.state} />
 
             <Step4
               currentStep={currentStep}
@@ -216,11 +231,11 @@ class MasterForm extends React.Component {
             {this.nextButton}
           </footer>
         </div>
-        
+
         <div className={style.scrim}></div>
       </React.Fragment>
-    );
+    )
   }
 }
 
-export default MasterForm;
+export default MasterForm

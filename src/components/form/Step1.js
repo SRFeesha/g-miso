@@ -1,11 +1,11 @@
-import React from "react";
-import style from "./MasterForm.module.css";
+import React from 'react'
+import style from './MasterForm.module.css'
 import Spacer from '../Spacer'
 
 class Step1 extends React.Component {
   render() {
     if (this.props.currentStep !== 1) {
-      return null;
+      return null
     }
     return (
       <div className="form-group">
@@ -19,8 +19,8 @@ class Step1 extends React.Component {
           name="name"
           type="text"
           placeholder="Mario"
-          value={this.props.name} 
-          onChange={this.props.handleChange} 
+          value={this.props.name}
+          onChange={this.props.handleChange}
           required
         />
 
@@ -31,8 +31,8 @@ class Step1 extends React.Component {
           name="surname"
           type="text"
           placeholder="Rossi"
-          value={this.props.surname} 
-          onChange={this.props.handleChange} 
+          value={this.props.surname}
+          onChange={this.props.handleChange}
         />
 
         <label htmlFor="email">E-mail</label>
@@ -42,8 +42,8 @@ class Step1 extends React.Component {
           name="email"
           type="email"
           placeholder="mario.rossi@gmail.com"
-          value={this.props.email} 
-          onChange={this.props.handleChange} 
+          value={this.props.email}
+          onChange={this.props.handleChange}
         />
 
         <label htmlFor="cell">Cellulare</label>
@@ -54,8 +54,8 @@ class Step1 extends React.Component {
           type="tel"
           placeholder="333 123 1234"
           inputmask="'mask': '999 999 9999'"
-          value={this.props.cell} 
-          onChange={this.props.handleChange} 
+          value={this.props.cell}
+          onChange={this.props.handleChange}
         />
 
         <Spacer h={4} />
@@ -65,19 +65,19 @@ class Step1 extends React.Component {
             id="privacy"
             name="privacy"
             type="checkbox"
-            value={this.props.privacy} 
+            value={this.props.privacy}
             defaultChecked={this.props.privacy}
-            onClick={this.props.handleChange} 
+            onClick={this.props.handleChange}
           />
           <label htmlFor="privacy" className={style.privacy}>
-            Ai sensi del D.Lgs 196/2003 Io sottoscritto/a {this.props.name}{" "}
+            Ai sensi del D.Lgs 196/2003 Io sottoscritto/a {this.props.name}{' '}
             offro il mio consenso al trattamento dei dati personali per le
             attività dell’Associazione.
           </label>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Step1;
+export default Step1

@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
 import FeaturedPost from '../../components/FeaturedPost'
-import style from '../../styles/blog.module.css'
+import style from '../../components/blog/blog.module.css'
 import { Container, Row, Col } from 'react-grid-system'
 
 export default class BlogIndexPage extends React.Component {

@@ -35,7 +35,7 @@
 }
 
 .imgContainer {
-  background-image: url(../img/Hero.jpg);
+  background-image: url(../../img/Hero.jpg);
   grid-column: 5 / 10;
   grid-row: 1;
   height: 70vh;

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import style from '../styles/blog.module.css'
+import style from '../../styles/blog.module.css'
 
 class FeaturedPost extends React.Component {
   render() {
@@ -75,13 +75,6 @@ export default () => (
                 meseanno: date(formatString: "MMM YYYY", locale: "IT")
                 giorno: date(formatString: "DD", locale: "IT")
                 featuredpost
-                featuredimage {
-                  childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
               }
             }
           }

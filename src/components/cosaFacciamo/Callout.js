@@ -1,6 +1,6 @@
 import React from 'react'
 import CS from './Callout.module.css'
-import Form from './form/FormContainer'
+import Form from '../form/FormContainer'
 
 const Callout = (props) => {
   return (

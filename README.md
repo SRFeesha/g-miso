@@ -3,7 +3,7 @@
 
 *Miso is a non-profit cultural association based in Brescia 🇮🇹*
 
-[🔗 Live Website ](youthful-pike-8c4df3.netlify.app/) 
+[🔗 Live Website ](https://youthful-pike-8c4df3.netlify.app/) 
 
 **Note:** This starter uses [Gatsby v2](https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/).
 

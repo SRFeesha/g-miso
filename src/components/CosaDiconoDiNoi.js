@@ -1,6 +1,5 @@
 import React from 'react'
 import Quote from './Quote'
-import Section from './Section'
 import ShadowTitle from './ShadowTitle'
 import Spacer from './Spacer'
 import { Container, Row, Col } from 'react-grid-system'
@@ -10,7 +9,7 @@ import style from './CosaDiconoDiNoi.module.css'
 
 const CosaDiconoDiNoi = () => {
   return (
-    <Section id="dicono-di-noi">
+    <section id="dicono-di-noi">
       <Container>
         <Row>
           <ShadowTitle title="Cosa dicono di noi" />
@@ -62,7 +61,7 @@ const CosaDiconoDiNoi = () => {
           </Col>
         </Row>
       </Container>
-    </Section>
+    </section>
   )
 }
 

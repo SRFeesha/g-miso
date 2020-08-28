@@ -1,7 +1,6 @@
 import React from 'react'
 import ShadowTitle from './ShadowTitle'
 import FakeCard from './FakeCard'
-// import imgTeatro from '../img/Teatro.jpg'
 import imgTeatro from '../img/Teatro.png'
 import imgCinema from '../img/Cinema.jpg'
 import Spacer from './Spacer'
@@ -15,6 +14,7 @@ const CosaFacciamo = (props) => {
       <p className="bigger transparent">
         Sosteniamo i giovani creativi nel mondo dello spettacolo
       </p>
+
       <Spacer h={9} />
 
       <Container>

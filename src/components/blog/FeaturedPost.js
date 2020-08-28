@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import style from '../../styles/blog.module.css'
+import style from './blog.module.css'
 
 class FeaturedPost extends React.Component {
   render() {

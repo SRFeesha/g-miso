@@ -22,10 +22,9 @@ const FakeCard = (props) => {
 
 const Callout = (props) => {
   return (
-    <div className={CS.callout}>
+    <div className={style.callout}>
       <p className="giant transparent">{props.text}</p>
       <Form />
-      {/* <Button>{props.cta}</Button> */}
     </div>
   )
 }

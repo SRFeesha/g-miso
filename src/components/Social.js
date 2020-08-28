@@ -4,7 +4,7 @@ import Spacer from './Spacer'
 import LogoInsta from '../img/Instagram Logo.svg'
 import LogoMail from '../img/Mail Logo.svg'
 import LogoFb from '../img/Facebook Logo.svg'
-import Button from './Button'
+import Button from './button/Button'
 import { Container, Row, Col } from 'react-grid-system'
 
 const Social = () => {

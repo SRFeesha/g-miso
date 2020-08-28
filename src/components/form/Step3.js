@@ -1,6 +1,5 @@
 import React from 'react'
 import style from './MasterForm.module.css'
-// import Button from "../Button";
 
 class Step3 extends React.Component {
   render() {

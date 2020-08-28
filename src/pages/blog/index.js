@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
-import FeaturedPost from '../../components/FeaturedPost'
+import FeaturedPost from '../../components/blog/FeaturedPost'
 import style from '../../components/blog/blog.module.css'
 import { Container, Row, Col } from 'react-grid-system'
 

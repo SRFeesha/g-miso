@@ -6,7 +6,7 @@ import Motivazioni from '../components/Motivazioni'
 import CosaDiconoDiNoi from '../components/CosaDiconoDiNoi/CosaDiconoDiNoi'
 import Social from '../components/Social'
 import ChiCiSostiene from '../components/ChiCiSostiene'
-import Dona from '../components/Dona'
+import Dona from '../components/dona/Dona'
 
 const Home = () => (
   <Layout>

@@ -7,24 +7,22 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".shadow+title",
-        scrub: true,
-        // markers: true
-    }
-});
-
-tl.to(".shadow", {x: 500, y: -300})
-
+  scrollTrigger: {
+      trigger: ".shadow+title",
+      scrub: true,
+      markers: true
+  }
+}); 
+tl.to(".shadow+title .shadow", {x: 2000})
 
 const shadowTitle = (props) => {
   return (
     <div>
       <Spacer h={12} />
 
-      <div className={"shadow+title" && style.father}>
-        <div className={"shadow" && style.shadow}>{props.title}</div>
-        <div className={style.shadowTitle}>{props.title}</div>
+      <div className="shadow+title">
+        <div className="shadow">{props.title}</div>
+        <div className="shadow-title">{props.title}</div>
       </div>
     </div>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 import ShadowTitle from '../ShadowTitle'
 import style from './CosaFacciamo.module.css'
 import Spacer from '../Spacer'
-import Callout from './Callout'
+import Form from '../form/FormContainer'
 import imgTeatro from '../../img/Teatro.png'
 import imgCinema from '../../img/Cinema.jpg'
 import { Container, Row, Col } from 'react-grid-system'
@@ -16,6 +16,16 @@ const FakeCard = (props) => {
       <hr className="transparent" />
       <p className="big">{props.text}</p>
       <Spacer h={7} />
+    </div>
+  )
+}
+
+const Callout = (props) => {
+  return (
+    <div className={CS.callout}>
+      <p className="giant transparent">{props.text}</p>
+      <Form />
+      {/* <Button>{props.cta}</Button> */}
     </div>
   )
 }

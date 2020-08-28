@@ -1,12 +1,11 @@
 import React from 'react'
 import HeroStyle from './Hero.module.css'
 import Spacer from './Spacer'
-import Section from './Section'
 
 const Hero = class extends React.Component {
   render() {
     return (
-      <Section id="hero">
+      <section id="hero">
         <Spacer h={11} />
         <div className={HeroStyle.hero}>
           <div className={HeroStyle.headline}>
@@ -23,7 +22,7 @@ const Hero = class extends React.Component {
           </div>
           <div className={HeroStyle.imgContainer}></div>
         </div>
-      </Section>
+      </section>
     )
   }
 }

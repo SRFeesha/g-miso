@@ -1,5 +1,5 @@
 # Miso 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/gatsby-starter-netlify-cms-ci/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ef6c6067-5a69-4d6c-94fd-9bec5704b8d7/deploy-status)](https://app.netlify.com/sites/youthful-pike-8c4df3/deploys)
 
 *Miso is a non-profit cultural association based in Brescia 🇮🇹*
 

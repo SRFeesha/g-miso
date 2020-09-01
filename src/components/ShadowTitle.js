@@ -10,44 +10,36 @@ if (typeof window !== `undefined`) {
 }
 
 const ShadowTitle = (props) => {
-  const shadowRefs = useRef([]);
-  shadowRefs.current = [];
+  const shadowRef = useRef(null);
+  // const triggerRef = useRef(null);
 
   useEffect(() => {
-    shadowRefs.current.forEach((el, index) => {
-      gsap.to(el, 
-        {
-          x: -200,
-          scrollTrigger: {
-            id: `shadow-${index+1}`,
-            trigger: el,
-            start: 'top bottom',
-            toggleActions: 'play none none reverse',
-            scrub: true,
-            markers: true
-          }
-        }
-      );
-    });
+    // console.log(shadowRef)
+    gsap.to(
+      shadowRef.current, {
+        x: -180,
+        scrollTrigger: {
+          id: `${shadowRef.current.textContent}`,
+          trigger: shadowRef.current,
+          start: 'top bottom',
+          toggleActions: 'play none none reverse',
+          scrub: true,
+          // markers: true
+        }}
+    );
   }, []);
-
-  const addToRefs = el => {
-    if (el && !shadowRefs.current.includes(el)) {
-        shadowRefs.current.push(el);
-    }
-    // console.log(this.revealRefs)
-  };
 
     return (
       <div>
         <Spacer h={12} />
         <div 
-          className="shadow+title" 
-          // ref = {this.addToRefs}
+          className="shadow-title-parent full-bleed" 
+          // ref = {triggerRef}
         >
           <div 
             className="shadow"
-            ref = {addToRefs}
+            // ref = {div => shadowRefs.current.push(div)}
+            ref = {shadowRef}
           >
             {props.title}
           </div>

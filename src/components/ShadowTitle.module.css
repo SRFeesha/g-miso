@@ -1,4 +1,4 @@
-.father{
+/* .father{
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: end;
@@ -22,10 +22,10 @@
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: var(--text-heading);
-    opacity: .1;
+    opacity: .05;
     color: var(--color-text);
     font-size: 10rem;
-    line-height: 0.7;
+    line-height: 0.1;
     user-select: none;
     white-space: nowrap;
     z-index: -1;
@@ -42,4 +42,4 @@
         overflow-x: hidden;
         overflow-y: visible;
     }
-}
+} */

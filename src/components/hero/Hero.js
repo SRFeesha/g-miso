@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from "react";
 import style from "./Hero.module.css";
 import Spacer from "../Spacer";
 import { gsap } from "gsap"
-import Splitting from "splitting";
-import 'splitting/dist/splitting.css'
-import 'splitting/dist/splitting-cells.css'
+// import Splitting from "splitting";
+// import 'splitting/dist/splitting.css'
+// import 'splitting/dist/splitting-cells.css'
 
 import heroImage from '../../img/Hero-2x-scura.png'
 
@@ -16,6 +16,8 @@ const Hero = () => {
   
   useEffect(() => {
     if (titleRef) {
+      // if (typeof window !== "undefined") {
+
       // let results = Splitting({target: titleRef, by: 'lines',})
       
       // results.forEach((splitResult) => {

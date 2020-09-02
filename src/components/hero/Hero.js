@@ -16,16 +16,16 @@ const Hero = () => {
   
   useEffect(() => {
     if (titleRef) {
-      let results = Splitting({target: titleRef, by: 'lines',})
+      // let results = Splitting({target: titleRef, by: 'lines',})
       
-      results.forEach((splitResult) => {
-        const wrappedLines = splitResult.lines.map((wordsArr) => `
-        <div class="mask-line">
-          ${wordsArr.map((word) => `${word.outerHTML}<span class="whitespace"> 
-         </span>`).join('')}
-        </div>`).join('');
-        splitResult.el.innerHTML = wrappedLines;
-      });
+      // results.forEach((splitResult) => {
+      //   const wrappedLines = splitResult.lines.map((wordsArr) => `
+      //   <div class="mask-line">
+      //     ${wordsArr.map((word) => `${word.outerHTML}<span class="whitespace"> 
+      //    </span>`).join('')}
+      //   </div>`).join('');
+      //   splitResult.el.innerHTML = wrappedLines;
+      // });
     }
   }, [titleRef])
 

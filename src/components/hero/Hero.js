@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import style from "./Hero.module.css";
 import Spacer from "../Spacer";
-import { gsap } from "gsap";
-import Splitting from "splitting";
+import { gsap } from "gsap"
+// import Splitting from "splitting";
 // import 'splitting/dist/splitting.css'
 // import 'splitting/dist/splitting-cells.css'
 
@@ -15,27 +15,22 @@ const Hero = () => {
   const tl = gsap.timeline();
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (titleRef) {
-        let results = Splitting({ target: titleRef, by: "lines" });
 
-        results.forEach((splitResult) => {
-          const wrappedLines = splitResult.lines
-            .map(
-              (wordsArr) => `
-        <div class="mask-line">
-          ${wordsArr
-            .map(
-              (word) => `${word.outerHTML}<span class="whitespace"> 
-         </span>`
-            )
-            .join("")}
-        </div>`
-            )
-            .join("");
-          splitResult.el.innerHTML = wrappedLines;
-        });
-      }
+    if (titleRef) {
+      // if (typeof window !== "undefined") {
+
+      // let results = Splitting({target: titleRef, by: 'lines',})
+      
+      // results.forEach((splitResult) => {
+      //   const wrappedLines = splitResult.lines.map((wordsArr) => `
+      //   <div class="mask-line">
+      //     ${wordsArr.map((word) => `${word.outerHTML}<span class="whitespace"> 
+      //    </span>`).join('')}
+      //   </div>`).join('');
+      //   splitResult.el.innerHTML = wrappedLines;
+      // });
+
+
     }
   }, []);
 

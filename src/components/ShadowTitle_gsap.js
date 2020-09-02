@@ -3,15 +3,19 @@ import Spacer from './Spacer'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+// fix for gatsby html render https://www.gatsbyjs.org/docs/debugging-html-builds/
+if (typeof window !== `undefined`) {
+  gsap.registerPlugin(ScrollTrigger)
+  gsap.core.globals("ScrollTrigger", ScrollTrigger)
+}
 
 const ShadowTitle = (props) => {
   const shadowRef = useRef(null);
   // const triggerRef = useRef(null);
-  
+
   useEffect(() => {
     // console.log(shadowRef)
     if (typeof window !== "undefined") {
-      // fix for gatsby html render https://www.gatsbyjs.org/docs/debugging-html-builds/
 
       // register gsap ScrollTrigger plugin
       gsap.registerPlugin(ScrollTrigger);

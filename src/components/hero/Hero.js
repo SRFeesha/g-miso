@@ -57,7 +57,7 @@ const Hero = () => {
           <h1
             className={style.title}
             ref={el => titleRef = el}
-            data-splitting
+            data-splitting=""
           >
             Miso<em className={style.low}> è una </em>
             <br />

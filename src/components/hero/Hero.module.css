@@ -8,18 +8,26 @@
   font-weight: 600;
   font-size: 2.9rem;
   line-height: 63px;
-
   color: var(--color-text);
   max-width: 887px;
   font-weight: 600;
-
   position: relative;
 }
 
-.title > span {
+.title,
+.subtitle {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.low {
   opacity: var(--transparency);
   font-weight: 500;
+  font-style: normal;
 }
+
+
 
 .subtitle { 
   position: relative;

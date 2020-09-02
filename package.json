@@ -5,7 +5,6 @@
   "author": "Austin Green",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
-    "bulma": "^0.9.0",
     "gatsby": "^2.20.35",
     "gatsby-image": "^2.3.5",
     "gatsby-plugin-hotjar-tracking": "^1.1.0",
@@ -34,6 +33,7 @@
     "react-grid-system": "^7.0.3",
     "react-helmet": "^6.0.0",
     "react-ripples": "^2.2.1",
+    "splitting": "^1.0.6",
     "uuid": "^7.0.0"
   },
   "keywords": [

@@ -13,6 +13,7 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
+  author,
   tags,
   title,
   helmet,
@@ -24,7 +25,7 @@ export const BlogPostTemplate = ({
       {helmet || ''}
       <header className={style.header}>
         <h1 className={style.title}>{title}</h1>
-        <p className={style.subtitle}>Autore data tempo di lettura</p>
+        <p className={style.subtitle}>Autore: {author} data tempo di lettura</p>
         <p className={style.excerpt}>{description}</p>
       </header>
       <hr className="line" />
@@ -63,6 +64,7 @@ BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
+  author: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -76,6 +78,7 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        author={post.frontmatter.author}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -109,6 +112,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        author
         tags
       }
     }

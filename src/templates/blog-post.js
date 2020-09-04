@@ -27,15 +27,13 @@ export const BlogPostTemplate = ({
       {helmet || ""}
       <header className={style.header}>
         <h1 className={style.title}>{title}</h1>
-        <p className={style.subtitle}>
-          <span className="transparent">
-            Autore: {author}
-            <span className={style.space}>/</span>
-            Pubblicato il:{" "}{date}
-            <span className={style.space}>/</span> 
-            Tempo di lettura:{" "}{timeToRead} min
-          </span>
-        </p>
+        <p className={style.subtitle}><span className="transparent">
+          Autore: {author}
+          <span className={style.space}>/</span>
+          Pubblicato il:{" "}{date}
+          <span className={style.space}>/</span> 
+          Tempo di lettura:{" "}{timeToRead} min
+        </span></p>
         <p className={style.excerpt}>{description}</p>
       </header>
       <hr className="line" />
@@ -75,7 +73,8 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   author: PropTypes.string,
-  date: PropTypes.PropTypes.instanceOf(Date),
+  // date: PropTypes.instanceOf(Date),
+  date: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 };

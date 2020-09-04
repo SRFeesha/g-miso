@@ -75,7 +75,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-iubenda-cookie-footer',
       options: {
-        iubendaOptions: {"lang":"it","siteId":1999025,"cookiePolicyId":52804844, "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"acceptButtonColor":"#0073CE","acceptButtonCaptionColor":"white","customizeButtonColor":"#212121","customizeButtonCaptionColor":"white","rejectButtonColor":"#0073CE","rejectButtonCaptionColor":"white","closeButtonDisplay":false,"position":"float-top-left","textColor":"white","backgroundColor":"rgba(173.14, 172.06, 172.06, 0.34)" } },
+        iubendaOptions: {"lang":"it","siteId":1999025,"cookiePolicyId":52804844, "cookiePolicyInOtherWindow":true,"inlineDelay":3500, "banner":{ "acceptButtonDisplay":true,"customizeButtonDisplay":true,"acceptButtonColor":"#0073CE","acceptButtonCaptionColor":"white","customizeButtonColor":"#212121","customizeButtonCaptionColor":"white","rejectButtonColor":"#0073CE","rejectButtonCaptionColor":"white","closeButtonDisplay":false,"position":"float-top-left","textColor":"white","backgroundColor":"rgba(173.14, 172.06, 172.06, 0.34)" } },
       }
     },
     {

@@ -24,7 +24,7 @@ const Footer = class extends React.Component {
               <a href="mailto:studiomisobrescia@gmail.com">Inviaci una mail</a>
             </Col>
             <Col lg={2} className={style.col}>
-              <Link to="/">Privacy Policy</Link>
+              <a href="https://www.iubenda.com/privacy-policy/52804844" target="_blank">Privacy Policy</a>
               <Link to="/">Trattamento dei dati</Link>
               <Link to="/">Organigramma Miso</Link>
               <Link to="/">Statuto dell'associazione</Link>

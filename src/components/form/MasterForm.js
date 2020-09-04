@@ -179,6 +179,7 @@ class MasterForm extends React.Component {
           <header className={style.stepper}>
             <p>Fase {this.state.currentStep} di 4</p>
             <h3>{this.state.currentTitle}</h3>
+            {/* eslint-disable-next-line */}
             <a
               className={style.close}
               onClick={this.props.handleClose}

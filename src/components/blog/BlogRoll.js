@@ -12,7 +12,7 @@ class BlogRoll extends React.Component {
       <div id="blog-post-list">
         {posts &&
           posts.map(({ node: post }) => (
-            <Link className={style.link} to={post.fields.slug}>
+            <Link className={style.link} to={post.fields.slug} key={post.id}>
               <article className={style.blogPost}>
                 <h3 className={style.title}>{post.frontmatter.title}</h3>
                 <p className={style.subtitle}>

@@ -28,17 +28,13 @@ export const BlogPostTemplate = ({
       <header className={style.header}>
         <h1 className={style.title}>{title}</h1>
         <p className={style.subtitle}>
-          <span className="transparent">Autore: </span>
-          {author}
           <span className="transparent">
+            Autore: {author}
             <span className={style.space}>/</span>
-            Pubblicato il:{" "}
-          </span>{" "}
-          {date}
-          <span className="transparent">
-            <span className={style.space}>/</span> Tempo di lettura:{" "}
-          </span>{" "}
-          {timeToRead} min
+            Pubblicato il:{" "}{date}
+            <span className={style.space}>/</span> 
+            Tempo di lettura:{" "}{timeToRead} min
+          </span>
         </p>
         <p className={style.excerpt}>{description}</p>
       </header>

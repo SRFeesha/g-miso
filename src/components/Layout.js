@@ -6,6 +6,9 @@ import Navbar from '../components/navbar/Navbar'
 import useSiteMetadata from './SiteMetadata'
 import { setConfiguration } from 'react-grid-system'
 import '../styles/global.css'
+import favicon32 from '../img/Favicon-32x32.png'
+import favicon16 from '../img/Favicon-16x16.png'
+import ogimage from '../img/og-image.png'
 
 // eslint-disable-next-line
 import font from '../styles/font/font.css'
@@ -24,13 +27,13 @@ const TemplateWrapper = ({ children }) => {
         <link
           rel="icon"
           type="image/png"
-          href={`${withPrefix('/')}img/logo/Favicon-32x32.png`}
+          href={favicon32}
           sizes="32x32"
         />
         <link
           rel="icon"
           type="image/png"
-          href={`${withPrefix('/')}img/logo/Favicon-16x16.png`}
+          href={favicon16}
           sizes="16x16"
         />
 
@@ -44,9 +47,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:type" content="nonprofit" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
-        <meta property="og:image" content={`${withPrefix('/')}img/Hero.jpg`} 
-        
-        />        
+        <meta property="og:image" content={ogimage} />        
       </Helmet>
 
       <Navbar />

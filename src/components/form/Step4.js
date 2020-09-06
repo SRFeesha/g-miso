@@ -10,7 +10,7 @@ class Step3 extends React.Component {
     return (
       <div className="form-group">
         <p className="big">
-          La tua richiesta di iscrizione è stata consegnata alla Miso 🥳
+          La tua richiesta di iscrizione è stata consegnata alla Miso <span role="img" aria-label="party">🥳</span>
         </p>
         <p>Ecco cosa succederà adesso:</p>
         <ol>

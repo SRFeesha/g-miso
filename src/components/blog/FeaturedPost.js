@@ -24,7 +24,7 @@ class FeaturedPost extends React.Component {
                   <h2>{post.frontmatter.title}</h2>
                   <p className={style.subtitle}>
                     <span className="transparent">Autore: </span>
-                    {/* {post.frontmatter.author} */}Ezio
+                    {post.frontmatter.author}
                     <span className="transparent">
                       <span className={style.space}>/</span> Tempo di lettura:{' '}
                     </span>
@@ -75,6 +75,7 @@ export default () => (
                 meseanno: date(formatString: "MMM YYYY", locale: "IT")
                 giorno: date(formatString: "DD", locale: "IT")
                 featuredpost
+                author
               }
             }
           }

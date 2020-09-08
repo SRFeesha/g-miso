@@ -22,6 +22,9 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content;
 
+  // console.log(date);
+  // console.log(date.toLocaleDateString('IT'));
+
   return (
     <Container>
       {helmet || ""}
@@ -30,6 +33,7 @@ export const BlogPostTemplate = ({
         <p className={style.subtitle}><span className="transparent">
           Autore: {author}
           <span className={style.space}>/</span>
+          {/* Pubblicato il:{" "}{date.toLocaleDateString('IT')} */}
           Pubblicato il:{" "}{date}
           <span className={style.space}>/</span> 
           Tempo di lettura:{" "}{timeToRead} min
@@ -74,13 +78,14 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   author: PropTypes.string,
   // date: PropTypes.instanceOf(Date),
-  date: PropTypes.string,
+  // date: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 };
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
+  console.log(post.frontmatter.date)
 
   return (
     <Layout>
@@ -122,7 +127,7 @@ export const pageQuery = graphql`
       html
       timeToRead
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "D MMM YYYY", locale: "IT")
         title
         description
         author

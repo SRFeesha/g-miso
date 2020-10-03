@@ -1,7 +1,7 @@
-import React from 'react'
-import style from './Dona.module.css'
-import Button from '../button/Button'
-import PayPalIcon from '../../img/paypal_logo.svg'
+import React from "react";
+import style from "./Dona.module.css";
+import Button from "../button/Button";
+import PayPalIcon from "../../img/paypal_logo.svg";
 
 const Dona = () => {
   return (
@@ -13,7 +13,11 @@ const Dona = () => {
             no-profit e in quanto tale ci sosteniamo con le donazioni di sponsor
             e privati. Aiutaci a crescere.
           </p>
-          <Button className={style.dona}>
+          <Button
+            className={style.dona}
+            href="https://www.paypal.com/paypalme/misoaps"
+            target="_blank"
+          >
             <img src={PayPalIcon} alt="PayPal icon" height={28} width={28} />
             Aiutaci con una donazione
           </Button>
@@ -24,7 +28,7 @@ const Dona = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Dona
+export default Dona;

@@ -7,6 +7,7 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   const authorsPage = path.resolve("src/templates/authors/index.js");
+  const authorPage = path.resolve("src/templates/author/index.js");
 
   return graphql(`
     {
@@ -80,18 +81,24 @@ exports.createPages = ({ actions, graphql }) => {
     });
 
 
-    // Tag pages:
-    let authorSet = []
-    //// Iterate through each post, putting all found tags into `tags`
-    posts.forEach((edge) => {
+    // // Tag pages:
+    // let authorSet = []
+    // //// Iterate through each post, putting all found tags into `tags`
+    // posts.forEach((edge) => {
+    //   if (edge.node.fields.authorId) {
+    //     authorSet.push(edge.node.fields.authorId);
+    //   }
+    // })
+    // // Eliminate duplicate tags
+    // authorSet = _.uniq(authorSet)
+    const authorSet = new Set();
+    result.data.allMarkdownRemark.edges.forEach(edge => {
       if (edge.node.fields.authorId) {
         authorSet.add(edge.node.fields.authorId);
       }
     })
-    // Eliminate duplicate tags
-    authorSet = _.uniq(authorSet)
 
-    // Make authors pages
+    // create author's pages inside export.createPages:
     const authorList = Array.from(authorSet);
     authorList.forEach(author => {
       createPage({
@@ -102,6 +109,7 @@ exports.createPages = ({ actions, graphql }) => {
         }
       });
     });
+    
   })
 }
 
@@ -118,11 +126,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 
-  if (Object.prototype.hasOwnProperty.call(node.frontmatter, 'author')) {
-    createNodeField({
-      node,
-      name: 'authorId',
-      value: node.frontmatter.author,
-    })
+  if (Object.prototype.hasOwnProperty.call(node, "frontmatter")) {
+    if (Object.prototype.hasOwnProperty.call(node.frontmatter, "author")) {
+      createNodeField({
+        node,
+        name: "authorId",
+        value: node.frontmatter.author
+      });
+    }
   }
 }

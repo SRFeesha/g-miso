@@ -110,6 +110,11 @@ export const pageQuery = graphql`
         title
         description
         tags
+        author {
+         id
+         bio
+         twitter
+       }
       }
     }
   }

@@ -6,6 +6,8 @@ const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
+  const authorsPage = path.resolve("src/templates/authors/index.js");
+
   return graphql(`
     {
       allMarkdownRemark(limit: 1000) {
@@ -14,6 +16,7 @@ exports.createPages = ({ actions, graphql }) => {
             id
             fields {
               slug
+              authorId
             }
             frontmatter {
               tags
@@ -69,6 +72,36 @@ exports.createPages = ({ actions, graphql }) => {
         },
       })
     })
+
+    // Authors page
+    createPage({
+      path: `/authors/`,
+      component: authorsPage
+    });
+
+
+    // Tag pages:
+    let authorSet = []
+    //// Iterate through each post, putting all found tags into `tags`
+    posts.forEach((edge) => {
+      if (edge.node.fields.authorId) {
+        authorSet.add(edge.node.fields.authorId);
+      }
+    })
+    // Eliminate duplicate tags
+    authorSet = _.uniq(authorSet)
+
+    // Make authors pages
+    const authorList = Array.from(authorSet);
+    authorList.forEach(author => {
+      createPage({
+        path: `/author/${_.kebabCase(author)}/`,
+        component: authorPage,
+        context: {
+          authorId: author
+        }
+      });
+    });
   })
 }
 
@@ -82,6 +115,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `slug`,
       node,
       value,
+    })
+  }
+
+  if (Object.prototype.hasOwnProperty.call(node.frontmatter, 'author')) {
+    createNodeField({
+      node,
+      name: 'authorId',
+      value: node.frontmatter.author,
     })
   }
 }

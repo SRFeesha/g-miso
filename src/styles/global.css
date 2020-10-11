@@ -234,3 +234,11 @@ s
 .mask-line {
     overflow: hidden;
 }
+
+.autore {
+    display: none;
+}
+
+/* .autore ~ .space {
+    display: none;
+} */

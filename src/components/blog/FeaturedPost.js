@@ -23,12 +23,14 @@ class FeaturedPost extends React.Component {
                 <div className="content">
                   <h2>{post.frontmatter.title}</h2>
                   <p className={style.subtitle}>
-                    <span className="transparent">Autore: </span>
-                    {/* {post.frontmatter.author} */}Ezio
-                    <span className="transparent">
-                      <span className={style.space}>/</span> Tempo di lettura:{' '}
+                    <span className="autore">
+                      <span className="transparent">Autore: </span>
+                      {/* {post.frontmatter.author} */}Ezio
                     </span>
-                    {post.timeToRead} min
+                    <span className="transparent">
+                      {/* <span className={style.space}>/</span>  */}
+                      Tempo di lettura:{' '}{post.timeToRead} min
+                    </span>
                   </p>
                   <p>{post.excerpt}</p>
                 </div>

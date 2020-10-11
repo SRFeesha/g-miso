@@ -15,17 +15,18 @@ class BlogRoll extends React.Component {
             <Link className={style.link} to={post.fields.slug}>
               <article className={style.blogPost}>
                 <h3 className={style.title}>{post.frontmatter.title}</h3>
-                <p className={style.subtitle}>
-                  <span className="transparent">Autore: </span>
-                  {/* {post.frontmatter.author} */}Ezio
+                <p className={style.subtitle}>  
+                  {post.frontmatter.date}
                   <span className="transparent">
-                    <span className={style.space}>/</span> Tempo di lettura:{' '}
+                    <span className={style.space}> /</span>
+                  </span>
+                  {/* <span className="transparent">Autore: </span> */}
+                  {/* {post.frontmatter.author}Ezio */}
+                  <span className="transparent">
+                    {/* <span className={style.space}>/</span>  */}
+                    Tempo di lettura:{' '}
                   </span>
                   {post.timeToRead} min{' '}
-                  <span className="transparent">
-                    <span className={style.space}>/</span>
-                  </span>
-                  {post.frontmatter.date}
                 </p>
                 <p class={style.excerpt}>{post.excerpt}</p>
               </article>

@@ -16,15 +16,34 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  featuredimage,
+  date,
+  timeToRead
 }) => {
   const PostContent = contentComponent || Content
+  console.log(PostContent.title)
 
   return (
     <Container>
       {helmet || ''}
       <header className={style.header}>
+        <img src={featuredimage} />
+        <h4>la featured image è {featuredimage}</h4>
         <h1 className={style.title}>{title}</h1>
-        <p className={style.subtitle}>Autore data tempo di lettura</p>
+
+        <p className={style.subtitle}>
+          <span className="transparent">
+            {date}
+            <span className={style.space}>{' '}/{' '}</span>
+            <span className="autore">
+              <span className="transparent">Autore: </span>
+              {/* {author} */}
+              <span className={style.space}></span> 
+            </span> 
+            Tempo di lettura:{' '}{timeToRead} min{' '}
+          </span>
+        </p>
+
         <p className={style.excerpt}>{description}</p>
       </header>
       <hr className="line" />
@@ -65,6 +84,9 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  featuredimage: PropTypes.string,
+  date: PropTypes.string,
+  timeToRead: PropTypes.string,
 }
 
 const BlogPost = ({ data }) => {
@@ -87,6 +109,9 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        // featuredimage={post.frontmatter.featuredimage}
+        date={post.frontmatter.date}
+        timeToRead={post.timeToRead}
       />
     </Layout>
   )
@@ -105,11 +130,13 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      timeToRead
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "D MMM YYYY", locale: "IT")
         title
         description
         tags
+        featuredimage
         author {
          id
          bio
@@ -118,4 +145,5 @@ export const pageQuery = graphql`
       }
     }
   }
+
 `

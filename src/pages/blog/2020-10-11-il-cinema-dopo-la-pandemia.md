@@ -9,6 +9,8 @@ tags:
   - cinema
   - streaming
 ---
+![](/img/cinema_milano_riaperture.jpg)
+
 Nonostante già nel 2012 il regista David Lynch criticasse, in uno spot parodico, la possibilità di vedere i film sullo schermo del proprio telefono, definendo tale esperienza «un inganno» non paragonabile nemmeno dopo «un trilione di anni» all’esperienza cinematografica, oggi lo streaming su pc e smartphone è diventato una delle forme di fruizione del cinema più apprezzate dal grande pubblico, tanto da arrivare a competere con le tradizionali sale cinematografiche o addirittura a minacciarne la sopravvivenza.
 
 In particolare il 2020, a causa dello scoppio della pandemia da Sars-Covid19, che ha portato all’imposizione di norme restrittive o alla chiusura forzata dei cinema di tutto il mondo, si sta rivelando un anno cruciale nel dibattito che, da circa una decina di anni, vede contrapporsi volti più o meno noti dell’industria cinematografica: i nostalgici del grande schermo e i pionieri del piccolo e del piccolissimo schermo.

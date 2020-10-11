@@ -7,6 +7,7 @@ featuredpost: false
 featuredimage: /img/cinema_milano_riaperture.jpg
 tags:
   - cinema
+  - streaming
 ---
 Nonostante già nel 2012 il regista David Lynch criticasse, in uno spot parodico, la possibilità di vedere i film sullo schermo del proprio telefono, definendo tale esperienza «un inganno» non paragonabile nemmeno dopo «un trilione di anni» all’esperienza cinematografica, oggi lo streaming su pc e smartphone è diventato una delle forme di fruizione del cinema più apprezzate dal grande pubblico, tanto da arrivare a competere con le tradizionali sale cinematografiche o addirittura a minacciarne la sopravvivenza.
 

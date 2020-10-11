@@ -3,7 +3,7 @@ templateKey: blog-post
 title: IL CINEMA DOPO LA PANDEMIA
 date: 2020-10-12T10:00:00.000Z
 description: "Sul grande schermo o in streaming… o entrambi? "
-featuredpost: false
+featuredpost: true
 featuredimage: /img/cinema_milano_riaperture.jpg
 tags:
   - cinema

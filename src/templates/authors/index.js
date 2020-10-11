@@ -7,7 +7,9 @@ export default ({
 }) => (
   <div>
     {authorNodes.map(({ node: author }, index) => (
-      <div key={`author-${author.id}`}>{author.id}</div>
+      <a className="author" key={`author-${author.id}`} href={`/author/`+ author.id.toLowerCase().replace(/\s/g, '-')}>
+        <div key={`author-${author.id}`}>{author.id}</div>
+      </a>
     ))}
   </div>
 )

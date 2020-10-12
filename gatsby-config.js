@@ -4,9 +4,6 @@ module.exports = {
     description:
       'Miso è una associazione culturale no-profit fondata a Brescia. A farne parte più di sessanta ragazzi: attori, filmmakers, registi o semplici appassionati',
   },
-  mapping: {
-    'MarkdownRemark.frontmatter.author': `AuthorYaml`,
-  },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
@@ -75,7 +72,6 @@ module.exports = {
         sv: 6
       }
     },
-    `gatsby-transformer-yaml`,
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {

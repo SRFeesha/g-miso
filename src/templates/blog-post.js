@@ -16,7 +16,7 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
-  featuredimage,
+  // featuredimage,
   date,
   timeToRead
 }) => {
@@ -27,8 +27,8 @@ export const BlogPostTemplate = ({
     <Container>
       {helmet || ''}
       <header className={style.header}>
-        <img src={featuredimage} />
-        <h4>la featured image è {featuredimage}</h4>
+        {/* <img src={featuredimage} /> */}
+        {/* <h4>la featured image è {featuredimage}</h4> */}
         <h1 className={style.title}>{title}</h1>
 
         <p className={style.subtitle}>
@@ -84,7 +84,7 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
-  featuredimage: PropTypes.string,
+  // featuredimage: PropTypes.string,
   date: PropTypes.string,
   timeToRead: PropTypes.string,
 }
@@ -136,12 +136,7 @@ export const pageQuery = graphql`
         title
         description
         tags
-        featuredimage
-        author {
-         id
-         bio
-         twitter
-       }
+        author
       }
     }
   }

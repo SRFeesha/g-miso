@@ -11,7 +11,11 @@ tags:
   - Von Schirach
   - Trolley Problem
 ---
+<center>
+
 ![](/img/trolley-problem.jpg)
+
+</center>
 
 La vita di una persona può valere di più di quella di un’altra? Certo che no, risponderebbe la maggioranza delle persone, non senza una certa indignazione. Per sfidare questa assunzione apparentemente scontata, Philippa Foot propose, nel 1967, un dilemma chiamato *trolley problem*. Nella versione originale, l’autista di un tram si trova a bordo di un veicolo che non permette di frenare, ma solamente di cambiare rotaia. Quando l’autista incontra un bivio, esso si trova a dover compiere una scelta angosciante: se decidesse di proseguire dritto ucciderebbe cinque persone legate ai binari; mentre se decidesse di cambiare binario ne ucciderebbe solo una. Seppure a prima vista il dilemma sembri semplice da risolvere (il 90% delle persone tende a rispondere che sacrificherebbe una vita piuttosto che cinque) si realizza solo dopo di trovarsi di fronte a un profondo dilemma morale: cambiando binario si compirebbe una scelta attiva e consapevole, dunque la morte della persona rientrerebbe sotto la propria responsabilità; mentre il proseguire diritto rappresenta solo una sorta di aderenza al fato. Ma la vita di cinque persone destinate a morire vale di più di quella di una sola che sarebbe stata risparmiata?
 

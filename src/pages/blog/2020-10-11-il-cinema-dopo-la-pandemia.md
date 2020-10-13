@@ -2,7 +2,7 @@
 templateKey: blog-post
 author: Michele Mor
 title: Il Cinema Dopo la Pandemia
-date: 2020-11-12T11:00:00.000Z
+date: 2020-10-12T10:00:00.000Z
 description: "Sul grande schermo o in streaming… o entrambi? "
 featuredpost: true
 featuredimage: /img/cinema_milano_riaperture.jpg

@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: "Terror di Von Schirach: a Voi la Scelta"
-date: 2020-10-13T22:00:00.000Z
+date: 2020-10-14T11:00:00.000Z
 description: "\"La vita di una persona può valere più di quella di un'altra?\""
 featuredpost: true
 featuredimage: /img/trolley-problem.jpg

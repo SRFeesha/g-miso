@@ -22,13 +22,13 @@ I Vitanova, la cui ultima opera ha compiuto tre anni lo scorso maggio, si presen
 
 Il tutto è sostenuto da messaggi innervati dal tema dello sdoppiamento tra realtà e fantasia, illusione e ripensamento: una vista sul mondo in *controluce*, come sembra suggerire il titolo dell’ultimo album. Forse si tratta di una constatazione del fatto che è proprio dallo scrutamento di ciò che è diverso e, spesso, di ciò che è illusorio, che possiamo riuscire a riconoscere e sostenere con maggiore equilibrio noi stessi. Come dice una canzone del 2014 in un EP dal titolo (chissà perché?) *Conflitti*, «*Il fallito ero io e guardavo davanti… e cercavo qualcosa di cui innamorarmi…*»[](#_ftn1)*(1)*. Si mette in scena una vita che è una continua ricerca dell’insostenibile, un camminare ogni giorno sull’orlo del disinganno, ma sempre con lo sguardo fisso in avanti. <div style="float: right; margin-left: 15px">
 
-![](/img/vitanova_controluce.jpg)
+![](/img/vitanova-conflitti.png)
 
 </div>  
 
 La loro discografia ufficiale inizia proprio nel 2014 con *Conflitti*, all’insegna dello sdoppiamento: un tema rilevabile in brani come *Una vita a metà*, fotografia di una figura umana a metà tra la fuga dal mondo e il coinvolgimento, che dona sogni a chi ne è carente e all’alba, disfatta dalle disillusioni, si rifugia presso le eroine di Flaubert, accompagnata da una progressione armonica e un colore vocale che il chitarrista Alessio Busi sembra aver inconsciamente preso in prestito ai Toto di *Manuela run*. Lo sdoppiamento raggiunge il massimo livello nel potente *Il giorno prima*, dal vago retrogusto R.E.M., che vede disegnarsi sulla partitura la condotta esistenziale di un uomo in bilico tra la sua attualità e ciò che era, appunto, il giorno prima: un uomo di ieri che, quasi proverbialmente, è una persona non più esistente, ma la cui assenza ci può drammaticamente privare della consapevolezza di noi stessi, in questa continua, disordinata pulsione verso l’ignoto e il disinganno, guidati dalla religione del «*fuoco spento*»*(2)*[](#_ftn2), che dovrebbe illuminare la via e non può farlo. Il disco si chiude con la travolgente *Tu ne uscirai*, promessa di un superamento positivo di tutte le possibili fasi di stallo e confusione già sperimentate nei brani precedenti. <div style="float: left; margin-right: 15px">
 
-![](/img/vitanova-conflitti.png)
+![](/img/vitanova_controluce.jpg)
 
 </div>  
 

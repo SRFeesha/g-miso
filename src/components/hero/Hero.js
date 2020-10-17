@@ -8,6 +8,12 @@ import { gsap } from "gsap"
 
 import heroImage from "../../img/Hero-2x-scura.png";
 
+import heroImage1 from "../../img/Hero-2x-scura_sbkohf/Hero-2x-scura_sbkohf_c_scale,w_200.png"
+import heroImage2 from "../../img/Hero-2x-scura_sbkohf/Hero-2x-scura_sbkohf_c_scale,w_569.png"
+import heroImage3 from "../../img/Hero-2x-scura_sbkohf/Hero-2x-scura_sbkohf_c_scale,w_814.png"
+import heroImage4 from "../../img/Hero-2x-scura_sbkohf/Hero-2x-scura_sbkohf_c_scale,w_1020.png"
+import heroImage5 from "../../img/Hero-2x-scura_sbkohf/Hero-2x-scura_sbkohf_c_scale,w_1200.png"
+
 const Hero = () => {
   let imgContainerRef = useRef(null);
   let titleRef = useRef(null);
@@ -80,7 +86,20 @@ const Hero = () => {
           className={style.imgContainer}
           ref={el => imgContainerRef = el}
         >
-          <img src={heroImage} className={style.heroImg} alt="miso teatro" />
+          {/* <img src={heroImage} className={style.heroImg} alt="miso teatro" /> */}
+
+          <img
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            srcset={
+              heroImage1 + " 200w," +
+              heroImage2 + " 569w," +
+              heroImage3 + " 814w," +
+              heroImage4 + " 1020w," +
+              heroImage5 + " 1200w"
+            }
+            src={heroImage5}
+            className={style.heroImg}
+            alt="Spettacolo teatrale associazione Miso"></img>
         </div>
       </div>
     </section>

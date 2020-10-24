@@ -26,7 +26,7 @@ const Footer = class extends React.Component {
             <Col lg={2} className={style.col}>
               <Link to="/">Privacy Policy</Link>
               <Link to="/">Trattamento dei dati</Link>
-              <Link to="/">Organigramma Miso</Link>
+              <Link to="/organigramma">Organigramma Miso</Link>
               <Link to="/">Statuto dell'associazione</Link>
             </Col>
             <Col lg={3} className={style.col}>

@@ -10,9 +10,26 @@ export const BlogPostContentfulTemplate = ({ data } ) => {
   console.log(data)
 
   return (
-    <Container>
-      sono un container
-    </Container>
+    <Layout>
+      <Container>
+          <header className={style.header}>
+            <h1 className={style.title}>{post.title}</h1>
+            <p className={style.subtitle}>
+              Autore: {post.author.name}
+            </p>
+            <p className={style.excerpt}>descrizione</p>
+          </header>
+          <hr className="line" />
+          <Row>
+            <Col lg={6} offset={{ lg: 1 }}>
+              <article className={style.blogContent}>
+                {post.body.body}
+              </article>
+            </Col>
+          </Row>
+          <Spacer h={8} />
+      </Container>
+    </Layout>
   )
 }
 

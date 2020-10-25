@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
 import Layout from '../components/Layout'
 import style from './blog-post.module.css'
 import { Container, Row, Col } from 'react-grid-system'
@@ -7,7 +8,7 @@ import Spacer from '../components/Spacer'
 
 export const BlogPostContentfulTemplate = ({ data } ) => {
   const post = data.contentfulBlogPost
-  console.log(data)
+  console.log(post)
 
   return (
     <Layout>
@@ -17,13 +18,13 @@ export const BlogPostContentfulTemplate = ({ data } ) => {
             <p className={style.subtitle}>
               Autore: {post.author.name}
             </p>
-            <p className={style.excerpt}>descrizione</p>
+            <p className={style.excerpt}>{post.subtitle.subtitle}</p>
           </header>
-          <hr className="line" />
+          <Img fluid={post.heroImage.fluid} />
           <Row>
             <Col lg={6} offset={{ lg: 1 }}>
-              <article className={style.blogContent}>
-                {post.body.body}
+              <article className={style.blogContent} dangerouslySetInnerHTML={{ __html: post.body.childMarkdownRemark.html}} >
+                
               </article>
             </Col>
           </Row>
@@ -36,7 +37,7 @@ export const BlogPostContentfulTemplate = ({ data } ) => {
 export default BlogPostContentfulTemplate
 
 export const pageQuery = graphql`
-  query ContentBlogPostBySlyg($slug: String!) {
+  query ContentBlogPostBySlug($slug: String!) {
     site{
       siteMetadata {
         title
@@ -50,7 +51,18 @@ export const pageQuery = graphql`
         name
       }
       body {
-        body
+        childMarkdownRemark {
+          html
+        }
+      }
+      heroImage {
+        fluid{
+          ...GatsbyContentfulFluid
+        }
+      }
+      subtitle {
+        id
+        subtitle
       }
     }
   }

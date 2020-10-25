@@ -5,9 +5,13 @@ import Layout from '../../components/Layout'
 import style from '../../components/blog/blog.module.css'
 import { Container, Row, Col } from 'react-grid-system'
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
+import Spacer from '../../components/Spacer'
 
 const BlogIndexPage = ({ data }) => {
-  const { edges: posts } = data.allContentfulBlogPost
+  const { nodes: posts } = data.allContentfulBlogPost
+
+  console.log(posts)
 
   return (
     <Layout>
@@ -20,34 +24,36 @@ const BlogIndexPage = ({ data }) => {
           </Row> */}
 
         <h1 className={style.sectionHeading}>Ultimi articoli</h1>
+
         <Row className={style.postList}>
-          <Col lg={2}></Col>
-          <Col lg={5}>
-            <div id="blog-post-list">
-              {posts &&
-                posts.map(({ node: post }) => (
-                  <Link key={post.id} className={style.link} to={post.slug}>
+
+          <div id="blog-post-list">
+            {posts && posts.map((post) => (
+              <Link key={post.id} className={style.link} to={post.slug}>
+                <Row >
+                  <Col lg={2}>
+                    {console.log(post)}
+                    <Img fluid={post.heroImage.fluid} />
+                  </Col>
+                  <Col lg={5}>
                     <article className={style.blogPost}>
                       <h3 className={style.title}>{post.title}</h3>
-                      {/* <p className={style.subtitle}>
-                        {post.date}
+                      <p className={style.subtitle}>
+                        {post.publishDate}
                         <span className="transparent">
                           <span className={style.space}> /</span>
                         </span>
                         <span className="transparent">Autore: </span>
-                        {post.frontmatter.author}Ezio
-                          <span className="transparent">
-                          <span className={style.space}>/</span>
-                            Tempo di lettura:{' '}
-                        </span>
-                        {post.timeToRead} min{' '}
-                      </p> */}
-                      <p className={style.excerpt}>{post.excerpt}</p>
+                        {post.author.name}
+                      </p>
+                      <p className={style.excerpt}>{post.subtitle.subtitle}</p>
                     </article>
-                  </Link>
-                ))}
-            </div>
-          </Col>
+                  </Col>
+                </Row>
+                <Spacer h={6} />
+              </Link>
+              ))}
+          </div>
         </Row>
       </Container>
     </Layout>
@@ -59,21 +65,25 @@ export default BlogIndexPage
 export const pageQuery = graphql`
   {
     allContentfulBlogPost (filter: {node_locale: {eq: "it"}}) {
-      edges {
-        node {
+      nodes {
+        id
+        slug
+        author {
           id
-          slug
+          name
+        }
+        heroImage {
+          id
           title
-          # tags
-          publishDate(locale: "IT")
-          body {
-            body
-          }
-          author {
-            id
-            name
+          fluid{
+            ...GatsbyContentfulFluid
           }
         }
+        publishDate(locale: "IT", formatString: "D MMM YYYY")
+        subtitle {
+          subtitle
+        }
+        title
       }
     }
   }

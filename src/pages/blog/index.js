@@ -6,10 +6,8 @@ import style from '../../components/blog/blog.module.css'
 import { Container, Row, Col } from 'react-grid-system'
 import { Link } from 'gatsby'
 
-// export default class BlogIndexPage extends React.Component {
 const BlogIndexPage = ({ data }) => {
   const { edges: posts } = data.allContentfulBlogPost
-  // console.log(data);
 
   return (
     <Layout>
@@ -60,7 +58,7 @@ export default BlogIndexPage
 
 export const pageQuery = graphql`
   {
-    allContentfulBlogPost {
+    allContentfulBlogPost (filter: {node_locale: {eq: "it"}}) {
       edges {
         node {
           id

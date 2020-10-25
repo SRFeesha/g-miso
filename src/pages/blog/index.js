@@ -9,7 +9,7 @@ import { Link } from 'gatsby'
 // export default class BlogIndexPage extends React.Component {
 const BlogIndexPage = ({ data }) => {
   const { edges: posts } = data.allContentfulBlogPost
-  console.log(data);
+  // console.log(data);
 
   return (
     <Layout>

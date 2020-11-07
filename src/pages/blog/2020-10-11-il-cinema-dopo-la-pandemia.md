@@ -1,10 +1,10 @@
 ---
 templateKey: blog-post
+author: Michele Mor
 title: Il Cinema Dopo la Pandemia
-date: 2020-11-12T11:00:00.000Z
+date: 2020-10-12T10:00:00.000Z
 description: "Sul grande schermo o in streaming… o entrambi? "
 featuredpost: true
-author: Michele Mor
 featuredimage: /img/cinema_milano_riaperture.jpg
 tags:
   - cinema
@@ -27,7 +27,7 @@ Una scelta favorita dal fatto che, mentre precedentemente l’uscita direttament
 
 La pandemia non ha soltanto favorito lo streaming, ma ha anche portato l’industria cinematografica a riorganizzarsi, riscoprendo alcune forme di visione collettiva ormai abbandonate, come il *drive in*. Negli Stati Uniti, difatti, l’emergenza ha fatto registrare ottimi guadagni ai cinema all’aperto, portando, inoltre, alla diffusione delle sale *pop-up*, cioè di *drive in* improvvisati in aree aperte, riorganizzate momentaneamente in funzione del grande schermo.
 
-Insomma, la pandemia ha permesso di rifocalizzarsi per un attimo sulla vera essenza del cinema, che si può ritrovare sia in sala cinematografica che in streaming, perché, come sostiene anche Christopher Nolan, in una celebre lettera inviata all’inizio dell’emergenza al *Washington Post*[](#_ftn1) *(3)*, lo scopo dei film è la *catarsi*, l’offerta di storie ed emozioni, che permettano allo spettatore di identificarsi. Questo processo di immedesimazione può avvenire in tal modo nell’intimo di ciascuno: nel buio di una camera da letto o all’interno di una sala o in un parcheggio riadattato; per sentirsi ancora, passato l’incubo della pandemia, una comunità unita. Per citare proprio le parole di Nolan, la cui pellicola, *Tenet*, uscirà nelle sale il 26 agosto 2020: «People love to experience stories, because whether they are doing it together or alone, film, television, novels and games engage our emotions \[…] Maybe, like me, you thought you were going to the movies for sorround sound, or Goobers, or soda and popcorn, or movie stars. But we weren’t. We were there for each other». La scelta, dunque, non è tra sala cinematografica e piattaforma streaming, ma tra esperienza privata ed esperienza sociale.
+Insomma, la pandemia ha permesso di rifocalizzarsi per un attimo sulla vera essenza del cinema, che si può ritrovare sia in sala cinematografica che in streaming, perché, come sostiene anche Christopher Nolan, in una celebre lettera inviata all’inizio dell’emergenza al *Washington Post*[](#_ftn1) *(3)*, lo scopo dei film è la *catarsi*, l’offerta di storie ed emozioni, che permettano allo spettatore di identificarsi. Questo processo di immedesimazione può avvenire in tal modo nell’intimo di ciascuno: nel buio di una camera da letto o all’interno di una sala o in un parcheggio riadattato; per sentirsi ancora, passato l’incubo della pandemia, una comunità unita. Per citare proprio le parole di Nolan, la cui pellicola, *Tenet*, uscito nelle sale il 26 agosto 2020: «People love to experience stories, because whether they are doing it together or alone, film, television, novels and games engage our emotions \[…] Maybe, like me, you thought you were going to the movies for sorround sound, or Goobers, or soda and popcorn, or movie stars. But we weren’t. We were there for each other». La scelta, dunque, non è tra sala cinematografica e piattaforma streaming, ma tra esperienza privata ed esperienza sociale.
 
 <mark> Giulia Greci </mark>
 

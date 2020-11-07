@@ -22,37 +22,30 @@ const BlogIndexPage = ({ data }) => {
               <FeaturedPost />
             </Col>
           </Row> */}
-
-        <h1 className={style.sectionHeading}>Ultimi articoli</h1>
-
-        <Row className={style.postList}>
-
-          <div id="blog-post-list">
-            {posts && posts.map((post) => (
-              <Link key={post.id} className={style.link} to={post.slug}>
-                <Row >
-                  <Col lg={2}>
-                    <Img fluid={post.heroImage.fluid} />
-                  </Col>
-                  <Col lg={5}>
+        <Row>
+          <Col lg={6}>
+            <h1 className={style.sectionHeading}>Ultimi articoli</h1>
+            <div className={style.postList}>
+              {posts &&
+                posts.map((post) => (
+                  <Link key={post.id} className={style.link} to={post.slug}>
+                    <div className={style.blogPostImage}>
+                      <Img fluid={post.heroImage.fluid} />
+                    </div>
                     <article className={style.blogPost}>
-                      <h3 className={style.title}>{post.title}</h3>
-                      <p className={style.subtitle}>
-                        {post.publishDate}
-                        <span className="transparent">
-                          <span className={style.space}> /</span>
-                        </span>
-                        <span className="transparent">Autore: </span>
-                        {post.author.name}
+                      <p className={style.subtitle + " transparent"}>
+                        {post.publishDate} 
+                        <span className={style.space}>/</span> 
+                        Scritto da: {post.author.name}
                       </p>
+                      <h3 className={style.title}>{post.title}</h3>
                       <p className={style.excerpt}>{post.subtitle.subtitle}</p>
                     </article>
-                  </Col>
-                </Row>
-                <Spacer h={6} />
-              </Link>
-              ))}
-          </div>
+                    <Spacer h={6} />
+                  </Link>
+                ))}
+            </div>
+          </Col>
         </Row>
       </Container>
     </Layout>
@@ -63,7 +56,7 @@ export default BlogIndexPage
 
 export const pageQuery = graphql`
   {
-    allContentfulBlogPost (filter: {node_locale: {eq: "it"}}) {
+    allContentfulBlogPost(filter: { node_locale: { eq: "it" } }) {
       nodes {
         id
         slug
@@ -74,7 +67,7 @@ export const pageQuery = graphql`
         heroImage {
           id
           title
-          fluid{
+          fluid {
             ...GatsbyContentfulFluid
           }
         }
@@ -87,4 +80,3 @@ export const pageQuery = graphql`
     }
   }
 `
-

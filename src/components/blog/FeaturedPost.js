@@ -88,7 +88,9 @@ export const query = graphql`
         node {
           id
           slug
-          riassunto
+          riassunto {
+            riassunto
+          }
           publishDate
           title
           meseanno: publishDate(formatString: "MMM YYYY", locale: "IT")

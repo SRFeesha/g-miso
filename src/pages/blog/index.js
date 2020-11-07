@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 // import BlogRoll from '../../components/blog/BlogRoll'
-// import FeaturedPost from '../../components/blog/FeaturedPost'
+import FeaturedPost from '../../components/blog/FeaturedPost'
 import style from '../../components/blog/blog.module.css'
 import { Container, Row, Col } from 'react-grid-system'
 import { Link } from 'gatsby'
@@ -11,7 +11,7 @@ import Spacer from '../../components/Spacer'
 const BlogIndexPage = ({ data }) => {
   const { nodes: posts } = data.allContentfulBlogPost
 
-  console.log(posts)
+  // console.log(posts)
 
   return (
     <Layout>
@@ -32,7 +32,6 @@ const BlogIndexPage = ({ data }) => {
               <Link key={post.id} className={style.link} to={post.slug}>
                 <Row >
                   <Col lg={2}>
-                    {console.log(post)}
                     <Img fluid={post.heroImage.fluid} />
                   </Col>
                   <Col lg={5}>

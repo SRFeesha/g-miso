@@ -8,9 +8,7 @@ const FeaturedPost = ({ data }) => {
   // const { data } = this.props
   if (data){
     const { edges: posts } = data
-    console.log (posts)
   }
-  console.log (data)
   return (
     <h3>fai cacare {data}</h3>
   )

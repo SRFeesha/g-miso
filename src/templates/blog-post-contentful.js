@@ -8,7 +8,6 @@ import Spacer from '../components/Spacer'
 
 export const BlogPostContentfulTemplate = ({ data } ) => {
   const post = data.contentfulBlogPost
-  console.log(post)
 
   return (
     <Layout>

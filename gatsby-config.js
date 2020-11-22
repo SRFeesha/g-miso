@@ -27,13 +27,13 @@ module.exports = {
         name: 'pages',
       },
     },
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     path: `${__dirname}/src/img`,
-    //     name: 'images',
-    //   },
-    // },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/img`,
+        name: 'images',
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -77,7 +77,9 @@ module.exports = {
       options: {
         spaceId: `bjomp5hbdlvh`,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        // accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken:'Wp6szbEl7YkxeD-wbrquu6pSRl1SCFfoxxkr7RYYJ-k',
+
       },
     },
     {

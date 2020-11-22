@@ -42,7 +42,6 @@
 //     //   { 
 //     //     x: -800 
 //     //   })
-//     // console.log(this.trigger.)
 
 //   }
 
@@ -50,7 +49,6 @@
 //     if (el && !revealRefs.current.includes(el)) {
 //         revealRefs.current.push(el);
 //     }
-//     // console.log(this.revealRefs)
 //   };
 
 //   render(){

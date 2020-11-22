@@ -21,7 +21,6 @@ export const BlogPostTemplate = ({
   timeToRead
 }) => {
   const PostContent = contentComponent || Content
-  console.log(PostContent.title)
 
   return (
     <Container>

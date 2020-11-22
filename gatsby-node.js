@@ -12,7 +12,7 @@ exports.createPages = ({ actions, graphql }) => {
     resolve(
       graphql(`
         {
-          allContentfulBlogPost(filter: {node_locale: {eq: "it"}}) {
+          allContentfulBlogPost {
             edges {
               node {
                 id
@@ -28,9 +28,7 @@ exports.createPages = ({ actions, graphql }) => {
           reject(result.errors)
         }
 
-        console.log(result.data)
         const posts = result.data.allContentfulBlogPost.edges
-        console.log (posts)
 
         posts.forEach((post, index) => {
           // const id = edge.node.id

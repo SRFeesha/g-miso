@@ -114,6 +114,18 @@ blockquote {
     margin: 0;
     max-width: 931px;
 }
+blockquote p,
+blockquote p em,
+blockquote p strong {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 1em;
+    width: 75vw;
+    max-width: 66ch;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: block;
+}
 
 .shadow-title-parent{
     display: grid;

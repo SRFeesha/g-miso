@@ -28,6 +28,7 @@ exports.createPages = ({ actions, graphql }) => {
           reject(result.errors)
         }
 
+
         const posts = result.data.allContentfulBlogPost.edges
 
         posts.forEach((post, index) => {

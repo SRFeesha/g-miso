@@ -11,37 +11,32 @@ import Spacer from '../../components/Spacer'
 const BlogIndexPage = ({ data }) => {
   const { nodes: posts } = data.allContentfulBlogPost
 
-  // console.log(posts)
-
   return (
     <Layout>
       <Container>
-        {/* <h1 className={style.sectionHeading}>Articoli in evidenza</h1>
-          <Row>
-            <Col lg={6} offset={{ lg: 1 }}>
-              <FeaturedPost />
-            </Col>
-          </Row> */}
         <Row>
-          <Col lg={6}>
+          <Col>
             <h1 className={style.sectionHeading}>Ultimi articoli</h1>
             <div className={style.postList}>
               {posts &&
                 posts.map((post) => (
                   <Link key={post.id} className={style.link} to={post.slug}>
                     <div className={style.blogPostImage}>
-                      <Img fluid={post.heroImage.fluid} />
+                      <Img
+                        fluid={post.heroImage.fluid}
+                        // imgStyle={{ objectFit: 'cover' }}
+                      />
                     </div>
                     <article className={style.blogPost}>
-                      <p className={style.subtitle + " transparent"}>
-                        {post.publishDate} 
-                        <span className={style.space}>/</span> 
+                      <p className={style.subtitle + ' transparent'}>
+                        {post.publishDate}
+                        <span className={style.space}>/</span>
                         Scritto da: {post.author.name}
                       </p>
                       <h3 className={style.title}>{post.title}</h3>
                       <p className={style.excerpt}>{post.subtitle.subtitle}</p>
                     </article>
-                    <Spacer h={6} />
+                    <Spacer h={8} />
                   </Link>
                 ))}
             </div>

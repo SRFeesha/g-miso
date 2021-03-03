@@ -94,8 +94,7 @@ article h4 {
 
   .blogContent blockquote p {
     font-size: 1.5rem;
-    /* margin-left: 0; */
-    margin: 2rem auto;
+    margin-left: 0;
     transform: none;
   }
 }

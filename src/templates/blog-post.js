@@ -33,13 +33,13 @@ export const BlogPostTemplate = ({
         <p className={style.subtitle}>
           <span className="transparent">
             {date}
-            <span className={style.space}>{' '}/{' '}</span>
+            <span className={style.space}> / </span>
             <span className="autore">
               <span className="transparent">Autore: </span>
               {/* {author} */}
-              <span className={style.space}></span> 
-            </span> 
-            Tempo di lettura:{' '}{timeToRead} min{' '}
+              <span className={style.space}></span>
+            </span>
+            Tempo di lettura: {timeToRead} min{' '}
           </span>
         </p>
 
@@ -85,7 +85,7 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object,
   // featuredimage: PropTypes.string,
   date: PropTypes.string,
-  timeToRead: PropTypes.string,
+  timeToRead: PropTypes.string
 }
 
 const BlogPost = ({ data }) => {
@@ -118,8 +118,8 @@ const BlogPost = ({ data }) => {
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
+    markdownRemark: PropTypes.object
+  })
 }
 
 export default BlogPost
@@ -139,5 +139,4 @@ export const pageQuery = graphql`
       }
     }
   }
-
 `

@@ -1,6 +1,7 @@
 .blogContent {
   line-height: 1.7;
   font-family: var(--text-copy-serif);
+  margin-top: 10vh;
   /* max-width: 50ch; */
   /* background-color: var(--warm-grey-900); */
   /* padding: 2rem; */
@@ -13,11 +14,7 @@
 }
 
 .blogContent blockquote p {
-  color: var(--warm-grey-050);
-}
-.blogContent blockquote p,
-.blogContent blockquote p em,
-.blogContent blockquote p strong {
+  color: var(--warm-grey-100);
   font-size: 2rem;
   margin-bottom: 3rem;
   margin-top: 1em;
@@ -93,5 +90,12 @@ article h4 {
   .excerpt {
     padding: 0;
     margin: 0;
+  }
+
+  .blogContent blockquote p {
+    font-size: 1.5rem;
+    /* margin-left: 0; */
+    margin: 2rem auto;
+    transform: none;
   }
 }

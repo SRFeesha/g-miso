@@ -15,6 +15,18 @@
 .blogContent blockquote p {
   color: var(--warm-grey-050);
 }
+.blogContent blockquote p,
+.blogContent blockquote p em,
+.blogContent blockquote p strong {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 1em;
+  width: 75vw;
+  max-width: 66ch;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: block;
+}
 
 .blogContent img {
   max-width: 100%;
